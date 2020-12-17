@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/core.module.css'
 import Layout, { siteTitle } from '../components/layout'
-import Nav from '../components/nav'
+
 
 export default function Home() {
   return (
@@ -10,8 +10,6 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-
-      <Nav></Nav>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
