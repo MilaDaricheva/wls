@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/core.module.css'
 import Layout from '../components/layout'
+import Nav from '../components/nav'
 
 const siteTitle = 'Contact Us'
 
@@ -11,6 +12,8 @@ export default function Contact() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+
+      <Nav></Nav>
 
 
       <main className={styles.main}>
