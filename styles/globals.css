@@ -1,3 +1,12 @@
+/* VARIABLES */
+:root {
+  --color-light-1: brown;
+  --color-light-2: brown;
+  --color-dark-1: brown;
+  --color-dark-2: brown;
+}
+
+/* RESET CSS */
 /* Box sizing rules */
 *,
 *::before,

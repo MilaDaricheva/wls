@@ -1,17 +1,18 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Layout, { siteTitle } from '../components/layout'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Layout>
+
       <Head>
-        <title>WideLine Studio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{siteTitle}</title>
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          WideLine Studio
+          {siteTitle}
         </h1>
 
         <p className={styles.description}>
@@ -23,9 +24,6 @@ export default function Home() {
 
       </main>
 
-      <footer className={styles.footer}>
-        Wideline Studio &copy;2020
-      </footer>
-    </div>
+    </Layout>
   )
 }
