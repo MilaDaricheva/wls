@@ -6,7 +6,6 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: yellow;
 }
 
 .main {
@@ -16,10 +15,8 @@
 .footer {
   display: flex;
   width: 100%;
-  border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
-  background: green;
 }
 
 

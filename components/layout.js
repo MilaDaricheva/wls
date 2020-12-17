@@ -9,6 +9,7 @@ export default function Layout({ children, home }) {
     <div className={styles.container}>
       <Head>
         <title>{siteTitle}</title>
+        <meta name="Description" content="Coding modern web designs using modern technologies."></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.wrapper}>
