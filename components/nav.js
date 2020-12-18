@@ -1,22 +1,23 @@
-import styles from '../styles/nav.module.css'
-import Link from 'next/link'
+//import styles from '../styles/nav.module.css'
+//import Link from 'next/link'
+import Link from './activelink'
 
 export default function Nav() {
   return (
     <nav>
-      <ul className={styles.nav}>
+      <ul className="nav">
         <li>
-          <Link href="/">
+          <Link activeClassName="active" href="/">
             <a>Home</a>
           </Link>
         </li>
         <li>
-          <Link href="/favorites">
+          <Link activeClassName="active" href="/favorites">
             <a>Favorites</a>
           </Link>
         </li>
         <li>
-          <Link href="/contact">
+          <Link activeClassName="active" href="/contact">
             <a>Contact</a>
           </Link>
         </li>

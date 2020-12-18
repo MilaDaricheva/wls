@@ -84,3 +84,8 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+/* NAVIGATION */
+nav .active {
+  color: blue;
+}
