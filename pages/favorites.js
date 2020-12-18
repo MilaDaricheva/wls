@@ -11,7 +11,7 @@ export default function Favorites() {
         <title>{siteTitle}</title>
       </Head>
 
-      <main className={styles.main}>
+      <main>
         <h1 className={styles.title}>
           {siteTitle}
         </h1>

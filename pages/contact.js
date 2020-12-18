@@ -13,11 +13,10 @@ export default function Contact() {
         <title>{siteTitle}</title>
       </Head>
 
-      <main className={styles.main}>
+      <main>
         <h1 className={styles.title}>
           {siteTitle}
         </h1>
-
       </main>
 
     </Layout>
