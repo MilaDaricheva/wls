@@ -42,7 +42,10 @@ dd {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.5em;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -85,6 +88,15 @@ select {
   }
 }
 
+h1, h2, h3, h4 {
+  font-weight: 400;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.8em;
+}
 /* NAVIGATION */
 nav .active {
   color: blue;

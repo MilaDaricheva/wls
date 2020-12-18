@@ -1,3 +1,4 @@
+import "fontsource-barlow-condensed/400-normal.css"
 import '../styles/globals.css'
 import { withRouter } from 'next/router'
 import { AnimatePresence } from "framer-motion"
