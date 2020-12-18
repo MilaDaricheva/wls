@@ -1,10 +1,11 @@
 import '../styles/globals.css'
 import { withRouter } from 'next/router'
 import { AnimatePresence } from "framer-motion"
-import getPageId from '../utils/coreutils'
+import coreUtils from '../utils/coreutils'
 
 function MyApp({ Component, pageProps, router }) {
-  const pgId = getPageId(router.pathname);
+  //console.log("UTILS", coreUtils.getPageId(router.pathname));
+  const pgId = coreUtils.getPageId(router.pathname);
   //console.log("ROUTER", pgId);
   return (
     <AnimatePresence exitBeforeEnter>

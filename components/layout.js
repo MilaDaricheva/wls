@@ -3,7 +3,7 @@ import Nav from '../components/nav'
 import styles from '../styles/core.module.css'
 import { withRouter } from 'next/router'
 import { motion } from "framer-motion"
-import getPageId from '../utils/coreutils'
+import coreUtils from '../utils/coreutils'
 
 export const siteTitle = 'WideLine Studio'
 
@@ -17,7 +17,7 @@ const textVariants = {
 
 function Layout({ router, children }) {
 
-  const pgId = getPageId(router.pathname);
+  const pgId = coreUtils.getPageId(router.pathname);
 
   return (
     <div className={styles.container}>

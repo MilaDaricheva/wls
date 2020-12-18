@@ -6,5 +6,15 @@ function getPageId(path) {
     return pageId;
   }
 }
-
-export default getPageId
+/*
+function coreUtils() {
+  let utilFunctions = {
+    getPageId: getPageId
+  }
+  return utilFunctions
+}
+*/
+let coreUtils = {
+  getPageId: getPageId
+}
+export default coreUtils
