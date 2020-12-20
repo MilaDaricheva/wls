@@ -1,9 +1,13 @@
 /* VARIABLES */
 :root {
-  --color-light-1: brown;
-  --color-light-2: brown;
-  --color-dark-1: brown;
-  --color-dark-2: brown;
+  --color-light-1: #f4f4f2;
+  --color-light-2: #e8e8e8;
+  --color-dark-1: #495464;
+  --color-dark-2: #bbbfca;
+  --color-dark-3: #bbbbbe;
+  --color-dark-4: #00B7AA;
+  /* 1D5575 4496A1 141217 */
+  /* A9A659 B74645 */
 }
 
 /* RESET CSS */
@@ -46,6 +50,8 @@ body {
   font-weight: 400;
   font-size: 1.5em;
   line-height: 1.5em;
+  background-color: var(--color-light-1);
+  color: var(--color-dark-1);
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -93,11 +99,27 @@ h1, h2, h3, h4 {
 }
 h1 {
   font-size: 2em;
+  line-height: 2em;
 }
 h2 {
   font-size: 1.8em;
 }
+p {
+  padding-bottom: 15px;
+}
 /* NAVIGATION */
+nav li {
+  display: inline;
+  padding: 0 10px;
+}
+nav {
+  border-bottom: 1px solid var(--color-light-2);
+}
+nav a {
+  padding: 10px;
+  display: inline-block;
+  color: var(--color-dark-4);
+ }
 nav .active {
-  color: blue;
+  color: var(--color-dark-1);
 }

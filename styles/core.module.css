@@ -10,6 +10,11 @@
 
 .main {
   flex: 1;
+  display: flex;
+  align-items: center;
+}
+.main main {
+  padding: 20px;
 }
 
 .footer {
@@ -19,6 +24,7 @@
   align-items: center;
   font-size: 1.2rem;
   line-height: 2em;
+  border-top: 1px solid var(--color-light-2);
 }
 
 
