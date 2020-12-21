@@ -6,14 +6,7 @@ function getPageId(path) {
     return pageId;
   }
 }
-/*
-function coreUtils() {
-  let utilFunctions = {
-    getPageId: getPageId
-  }
-  return utilFunctions
-}
-*/
+/* Export helper functions here */
 let coreUtils = {
   getPageId: getPageId
 }

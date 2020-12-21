@@ -1,25 +1,26 @@
 import Head from 'next/head'
 import styles from '../styles/core.module.css'
-import Layout from '../components/layout'
-
+import staticVars from '../utils/staticvars'
+import { motion } from "framer-motion"
 
 const siteTitle = 'Contact Us'
 
 export default function Contact() {
   return (
-    <Layout>
+    <div>
 
       <Head>
         <title>{siteTitle}</title>
       </Head>
 
-      <main>
-        <h1 className={styles.title}>
-          {siteTitle}
-        </h1>
-      </main>
-
-    </Layout>
+      <motion.div id="contact" initial="exit" animate="enter" exit="exit" variants={staticVars.pageTransition}>
+        <main>
+          <h1 className={styles.title}>
+            {siteTitle}
+          </h1>
+        </main>
+      </motion.div>
+    </div>
 
   )
 }
