@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Nav from '../components/nav'
+import MainSvg from '../components/mainsvg'
 import styles from '../styles/core.module.css'
 import { withRouter } from 'next/router'
 import { motion } from "framer-motion"
@@ -37,6 +38,7 @@ function Layout({ router, children }) {
           WideLine Studio &copy;2020
         </footer>
       </div>
+      <MainSvg />
     </div>
   )
 }

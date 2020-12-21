@@ -118,8 +118,59 @@ nav {
 nav a {
   padding: 10px;
   display: inline-block;
-  color: var(--color-dark-4);
+  color: var(--color-dark-1);
  }
 nav .active {
-  color: var(--color-dark-1);
+  color: var(--color-dark-4);
+}
+
+/* BACKGROUND CIRCLES */
+#circle {
+  top:-200px;
+  right:-200px;
+  z-index: 1;
+  position: absolute;
+  width: 823px;
+  height: 858px;
+}
+
+#circle1 {
+  left:10px;
+  top:5px;
+  position: absolute;
+  background-image: url("../public/circle1.webp");
+  display: block;
+  width: 797px;
+  height: 826px;
+  animation: rotation 34s infinite linear;
+}
+#circle2 {
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-image: url("../public/circle2.webp");
+  display: block;
+  width: 823px;
+  height: 858px;
+  animation: rotationBack 38s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotationBack {
+  from {
+    transform: rotate(359deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
 }

@@ -1,8 +1,12 @@
 .container {
   min-height: 100vh;  
+  position: relative;
+  overflow: hidden;
 }
 
 .wrapper {
+  position: relative;
+  z-index: 2;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
