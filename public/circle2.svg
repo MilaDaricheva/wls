@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="491.64" y1="355.035" x2="363.72" y2="478.565">
+			<stop offset="0" stop-color="#00b7aa"  />
+			<stop offset="0.373" stop-color="#bbbfca"  />
+		</linearGradient>
+		<linearGradient id="grd2" gradientUnits="userSpaceOnUse"  x1="562.22" y1="317.433" x2="305.56" y2="565.287">
+			<stop offset="0" stop-color="#00b7aa"  />
+			<stop offset="0.373" stop-color="#bbbfca"  />
+		</linearGradient>
+		<linearGradient id="grd3" gradientUnits="userSpaceOnUse"  x1="223.64" y1="223.186" x2="651.68" y2="608.594">
+			<stop offset="0" stop-color="#00b7aa"  />
+			<stop offset="0.373" stop-color="#bbbfca"  />
+		</linearGradient>
+    <mask id="stripe">
+      <rect x="0"
+            y="0"
+            width="800"
+            height="800"
+            fill="white" />
+
+			<path class="shp0" d="M207.74 210.08L247.19 247.18L225 275L175.86 254.35L207.74 210.08Z" />
+			<path class="shp0" d="M658 444L692.52 452.23L677.59 512.87L645.33 498.62L658 444Z" />
+			<path class="shp0" d="M316.34 442.08L379 426L400 453.09L345.02 479.97L316.34 442.08Z" />
+			<path class="shp0" d="M450 457L465 457L478.18 482.53L465.34 495.84L450 457Z" />
+			<path class="shp0" d="M477.11 315.28L493.49 330.4L467.87 373.71L434.37 354.49L477.11 315.28Z" />
+			<path class="shp0" d="M408.13 625.21L471.5 626.53L483 677L395 677L408.13 625.21Z" />
+			<path class="shp0" d="M498.44 553.24L544.67 510.38L571.65 535.13L517.48 583.3L498.44 553.24Z" />
+			<path class="shp0" d="M483.33 397.35L531 388L531 434L479.6 423.93L483.33 397.35Z" />
+			<path class="shp0" d="M285 336.5L300.19 315.9L337.36 361.02L316.58 368.33L285 336.5Z" />
+
+
+    </mask>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+    .shp0 { fill: black } 
+		.shp00 { fill: none;stroke: url(#grd1);stroke-linecap:round;stroke-width: 3 } 
+		.shp1 { fill: none;stroke: url(#grd2);stroke-linecap:round;stroke-width: 3 } 
+		.shp2 { fill: none;stroke: url(#grd3);stroke-linecap:round;stroke-width: 3 } 
+	</style>
+	<g >
+		<g mask="url(#stripe)" >
+			<path class="shp00" d="M423 492C379.87 492 345 456.24 345 412C345 367.76 379.87 332 423 332C466.13 332 501 367.76 501 412C501 456.24 466.13 492 423 492Z" />
+			<path class="shp1" d="M424.5 588C337.96 588 268 518.27 268 432C268 345.73 337.96 276 424.5 276C511.04 276 581 345.73 581 432C581 518.27 511.04 588 424.5 588Z" />
+			<path class="shp2" d="M422 657C277.67 657 161 542.34 161 400.5C161 258.66 277.67 144 422 144C566.33 144 683 258.66 683 400.5C683 542.34 566.33 657 422 657Z" />
+		</g>
+	</g>
+</svg>

@@ -4,8 +4,19 @@ import MainSvg from '../components/mainsvg'
 import styles from '../styles/core.module.css'
 import { withRouter } from 'next/router'
 import coreUtils from '../utils/coreutils'
+import { motion } from "framer-motion"
 
 export const siteTitle = 'WideLine Studio'
+
+function transformCircle(event) {
+  // 1. Find mouse position
+  let xAxis = Math.round((window.innerWidth * 0.5 - event.pageX) / (window.innerWidth / 50));
+  let yAxis = Math.round((window.innerHeight * 0.5 - event.pageY) / (window.innerHeight / 50));
+  //console.log(xAxis, yAxis)
+  // 2. Create animations
+  let circleEl = document.getElementById("circle");
+  circleEl.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+}
 
 function Layout({ router, children }) {
 
@@ -23,9 +34,9 @@ function Layout({ router, children }) {
       <div className={styles.wrapper}>
         <Nav />
 
-        <div className={styles.main} >
+        <motion.div className={styles.main} width={"100%"} height={"100%"} position={"relative"} onMouseMove={transformCircle}>
           {children}
-        </div>
+        </motion.div>
 
         <footer className={styles.footer}>
           WideLine Studio &copy;2020

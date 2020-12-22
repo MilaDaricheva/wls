@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="17.896" y1="550.81" x2="103.464" y2="367.31">
+			<stop offset="0.256" stop-color="#bbbbbe"  />
+			<stop offset="1" stop-color="#00b7aa"  />
+		</linearGradient>
+		<linearGradient id="grd2" gradientUnits="userSpaceOnUse"  x1="356.626" y1="591.98" x2="535.194" y2="209.04">
+			<stop offset="0" stop-color="#00b7aa"  />
+			<stop offset="0.582" stop-color="#bbbbbe"  />
+		</linearGradient>
+		<linearGradient id="grd3" gradientUnits="userSpaceOnUse"  x1="470.58" y1="446.212" x2="382.84" y2="408.968">
+			<stop offset="0" stop-color="#00b7aa"  />
+			<stop offset="0.582" stop-color="#bbbbbe"  />
+		</linearGradient>
+		<linearGradient id="grd4" gradientUnits="userSpaceOnUse"  x1="347.267" y1="312.92" x2="511.633" y2="531.04">
+			<stop offset="0" stop-color="#00b7aa"  />
+			<stop offset="0.582" stop-color="#bbbbbe"  />
+		</linearGradient>
+    <mask id="stripe">
+      <rect x="0"
+            y="0"
+            width="800"
+            height="800"
+            fill="white" />
+
+			<path class="shp0" d="M125.15 112.92L174.94 162.64L109.33 268.19L38.36 229.6L125.15 112.92Z" />
+			<path class="shp0" d="M596 34L789.2 209.56L715.69 242.01L564.58 95.11L596 34Z" />
+			<path class="shp0" d="M183 636L296.12 706.81L267.58 764.27L133.13 690.1L183 636Z" />
+			<path class="shp0" d="M633.45 638.08L714.28 531.23L782.06 570.05L689.58 698.02L633.45 638.08Z" />
+			<path class="shp0" d="M174.6 375.99L253 373L257.28 433.19L177.37 451.38L174.6 375.99Z" />
+			<path class="shp0" d="M303.72 548.52L336.15 561.77L294.18 615.81L262.95 586.31L303.72 548.52Z" />
+			<path class="shp0" d="M524.71 574.03L553 558L596.12 607.4L558.51 628.35L524.71 574.03Z" />
+			<path class="shp0" d="M628 393L692.28 388.19L691.83 427L628 421L628 393Z" />
+			<path class="shp0" d="M358.08 141L533.87 146.12L515 193L368 193L358.08 141Z" />
+			<path class="shp0" d="M382.9 595.41L443 594L445.11 639.11L373 633L382.9 595.41Z" />
+			<path class="shp0" d="M317.84 313.08L340.44 328.34L314.16 375.45L277.73 365.66L317.84 313.08Z" />
+			<path class="shp0" d="M357.9 281.29L400 269L405.6 299.37L372.55 307.67L357.9 281.29Z" />
+			<path class="shp0" d="M510.91 362.02L564.19 338.67L571.99 385.43L534.86 397.3L510.91 362.02Z" />
+			<path class="shp0" d="M502.44 505.2L523.59 469.59L552.03 485.29L517.2 522.49L502.44 505.2Z" />
+			<path class="shp0" d="M386 523L473 523L483.85 551.86L375.34 554.89L386 523Z" />
+			<path class="shp0" d="M365.05 385.3L392 400L389.12 427.3L349.54 425.56L365.05 385.3Z" />
+			<path class="shp0" d="M460.68 424.15L491 429L477.33 465.85L452.72 450.4L460.68 424.15Z" />
+			<path class="shp0" d="M400 360L423.7 355.65L423.44 392.54L407.85 394.26L400 360Z" />
+			<path class="shp0" d="M423.4 464.51L436.46 460.11L449.43 484.5L426.98 488.43L423.4 464.51Z" />
+
+
+    </mask>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+    .shp0 { fill: black } 
+		.shp00 { fill: none;stroke: url(#grd1);stroke-linecap:round;stroke-width: 3 } 
+		.shp1 { fill: none;stroke: url(#grd2);stroke-linecap:round;stroke-width: 4 } 
+		.shp2 { fill: none;stroke: url(#grd3);stroke-linecap:round;stroke-width: 3 } 
+		.shp3 { fill: none;stroke: url(#grd4);stroke-linecap:round;stroke-width: 3 } 
+	</style>
+	<g mask="url(#stripe)" >
+		<path class="shp00" d="M413 760C210.05 760 46 595.95 46 393C46 190.05 210.05 26 413 26C615.95 26 780 190.05 780 393C780 595.95 615.95 760 413 760Z" />
+
+		<path class="shp1" d="M432.5 620C308.9 620 209 515.63 209 386.5C209 257.37 308.9 153 432.5 153C556.1 153 656 257.37 656 386.5C656 515.63 556.1 620 432.5 620Z" />
+
+		<path class="shp2" d="M423.5 476C393.91 476 370 452.98 370 424.5C370 396.02 393.91 373 423.5 373C453.09 373 477 396.02 477 424.5C477 452.98 453.09 476 423.5 476Z" />
+
+		<path class="shp3" d="M421.5 547C348.23 547 289 487.55 289 414C289 340.45 348.23 281 421.5 281C494.77 281 554 340.45 554 414C554 487.55 494.77 547 421.5 547Z" />
+	</g>
+</svg>
