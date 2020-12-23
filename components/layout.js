@@ -12,10 +12,19 @@ function transformCircle(event) {
   // 1. Find mouse position
   let xAxis = Math.round((window.innerWidth * 0.5 - event.pageX) / (window.innerWidth / 50));
   let yAxis = Math.round((window.innerHeight * 0.5 - event.pageY) / (window.innerHeight / 50));
-  //console.log(xAxis, yAxis)
+  let zAxis1 = 2 * (xAxis + yAxis);
+  let zAxis2 = 3 * (xAxis + yAxis);
+  let zAxis3 = 4 * (xAxis + yAxis);
+  //console.log(xAxis, yAxis, zAxis3);
   // 2. Create animations
-  let circleEl = document.getElementById("circle");
-  circleEl.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  //let circleEl = document.getElementById("circle");
+  let circleEl1 = document.getElementById("circle1");
+  let circleEl2 = document.getElementById("circle2");
+  let circleEl3 = document.getElementById("circle3");
+  //circleEl.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  circleEl1.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateZ(${zAxis1}px)`;
+  circleEl2.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateZ(${zAxis2}px)`;
+  circleEl3.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateZ(${zAxis3}px)`;
 }
 
 function Layout({ router, children }) {

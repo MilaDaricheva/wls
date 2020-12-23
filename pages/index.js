@@ -7,7 +7,7 @@ const siteTitle = 'WideLine Studio'
 
 export default function Home() {
 
-  console.log("VARS", staticVars.pageTransition);
+  //console.log("VARS", staticVars.pageTransition);
 
   return (
     <div>

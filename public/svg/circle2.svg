@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="491.64" y1="355.035" x2="363.72" y2="478.565">
+			<stop offset="0" stop-color="#00b7aa"  />
+			<stop offset="0.373" stop-color="#bbbfca"  />
+		</linearGradient>
+		<linearGradient id="grd2" gradientUnits="userSpaceOnUse"  x1="562.22" y1="317.433" x2="305.56" y2="565.287">
+			<stop offset="0" stop-color="#00b7aa"  />
+			<stop offset="0.373" stop-color="#bbbfca"  />
+		</linearGradient>
+		<linearGradient id="grd3" gradientUnits="userSpaceOnUse"  x1="223.64" y1="223.186" x2="651.68" y2="608.594">
+			<stop offset="0" stop-color="#00b7aa"  />
+			<stop offset="0.373" stop-color="#bbbfca"  />
+		</linearGradient>
+    <mask id="stripe2">
+      <rect x="0"
+            y="0"
+            width="800"
+            height="800"
+            fill="white" />
+
+			<path id="Layer 3" class="shp0" d="M125.15 112.92L174.94 162.64L109.33 268.19L38.36 229.6L125.15 112.92Z" />
+			<path id="Shape 1" class="shp0" d="M586 40L779.2 215.56L705.69 248.01L554.58 101.11L586 40Z" />
+			<path id="Shape 2" class="shp0" d="M183 636L296.12 706.81L248.56 782.21L114.93 717.63L183 636Z" />
+			<path id="Shape 3" class="shp0" d="M620.45 645.08L701.28 538.23L769.06 577.05L676.58 705.02L620.45 645.08Z" />
+
+			<path id="Layer 5" class="shp0" d="M162.6 367.99L241 365L245.28 425.19L165.37 443.38L162.6 367.99Z" />
+			<path id="Shape 5" class="shp0" d="M280.72 542.52L313.15 555.77L271.18 609.81L239.95 580.31L280.72 542.52Z" />
+			<path id="Shape 6" class="shp0" d="M479.64 725.92L516.87 712.02L532.12 765.4L494.51 786.35L479.64 725.92Z" />
+			<path id="Shape 7" class="shp0" d="M615 386L679.28 381.19L678.83 420L615 414L615 386Z" />
+			<path id="Shape 9" class="shp0" d="M332.13 129.31L517.97 134.64L488.96 210.07L356.17 204.32L332.13 129.31Z" />
+			<path id="Shape 10" class="shp0" d="M332.9 745.41L393 744L395.11 789.11L323 783L332.9 745.41Z" />
+
+			<path id="Shape 13" class="shp0" d="M293.75 283.78L326.67 321.93L297.73 358.88L253.93 338.12L293.75 283.78Z" />
+			<path id="Shape 14" class="shp0" d="M339.9 266.29L382 254L387.6 284.37L354.55 292.67L339.9 266.29Z" />
+			<path id="Shape 15" class="shp0" d="M488.91 342.02L542.19 318.67L549.99 365.43L512.86 377.3L488.91 342.02Z" />
+			<path id="Shape 16" class="shp0" d="M483.7 470.57L507.74 435.58L545.03 454.29L529.33 500.55L483.7 470.57Z" />
+			<path id="Shape 17" class="shp0" d="M359.04 505.86L428.42 506.57L444.93 551.71L342.79 551.57L359.04 505.86Z" />
+
+			<path id="Shape 18" class="shp0" d="M320.14 392.1L374.4 392.01L378.33 417.78L325.54 436.56L320.14 392.1Z" />
+			<path id="Shape 20" class="shp0" d="M376 335L399.7 330.65L399.44 367.54L383.85 369.26L376 335Z" />
+			<path id="Shape 21" class="shp0" d="M409.58 428.73L420.78 425.04L440.42 458.5L418.7 467.61L409.58 428.73Z" />
+
+
+    </mask>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+    .shp0 { fill: black } 
+    .shp00 { fill: none;stroke: url(#grd1);stroke-linecap:round } 
+		.shp1 { fill: none;stroke: url(#grd2);stroke-linecap:round;stroke-width: 2 } 
+		.shp2 { fill: none;stroke: url(#grd3);stroke-linecap:round } 
+		.shp3 { fill: none;stroke: url(#grd4);stroke-linecap:round;stroke-width: 2 }  
+	</style>
+	<g >
+		<g mask="url(#stripe2)" >
+
+		<path id="Layer 1" class="shp00" d="M400 767C197.05 767 33 602.95 33 400C33 197.05 197.05 33 400 33C602.95 33 767 197.05 767 400C767 602.95 602.95 767 400 767Z" />
+
+		<path id="Layer 4" class="shp1" d="M419.5 627C295.9 627 196 522.63 196 393.5C196 264.37 295.9 160 419.5 160C543.1 160 643 264.37 643 393.5C643 522.63 543.1 627 419.5 627Z" />
+
+		<path id="Shape 11" class="shp2" d="M400.5 534C327.23 534 268 474.55 268 401C268 327.45 327.23 268 400.5 268C473.77 268 533 327.45 533 401C533 474.55 473.77 534 400.5 534Z" />
+
+		<path id="Shape 12" class="shp3" d="M400.5 452C370.91 452 347 428.98 347 400.5C347 372.02 370.91 349 400.5 349C430.09 349 454 372.02 454 400.5C454 428.98 430.09 452 400.5 452Z" />
+
+		</g>
+	</g>
+</svg>

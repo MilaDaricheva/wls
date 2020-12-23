@@ -44,6 +44,7 @@ dd {
 
 /* Set core body defaults */
 body {
+  perspective: 1000px;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   font-family: 'Barlow Condensed', sans-serif;
@@ -132,29 +133,49 @@ nav .active {
   right:-200px;
   z-index: 1;
   position: absolute;
-  width: 823px;
-  height: 858px;
-  transition: transform 0.5s;
+  width: 800px;
+  height: 800px;
+  /*transition: transform 0.5s;*/
+  
 }
 #circle1 {
-  left:10px;
-  top:5px;
+  left: 0;
+  top: 0;
   position: absolute;
-  background-image: url("../public/circle1.webp");
   display: block;
-  width: 797px;
-  height: 826px;
-  animation: rotation 34s infinite linear;
+  width: 800px;
+  height: 800px;
+  transition: transform 0.5s;
+  /*animation: rotation 54s infinite linear;*/
+}
+#circle1 div {
+  animation: rotation 54s infinite linear;
 }
 #circle2 {
   left: 0;
   top: 0;
   position: absolute;
-  background-image: url("../public/circle2.webp");
   display: block;
-  width: 823px;
-  height: 858px;
-  animation: rotationBack 38s infinite linear;
+  width: 800px;
+  height: 800px;
+  transition: transform 0.5s;
+  /*animation: rotationBack 42s infinite linear;*/
+}
+#circle2 div {
+  animation: rotationBack 42s infinite linear;
+}
+#circle3 {
+  left: 0;
+  top: 0;
+  position: absolute;
+  display: block;
+  width: 800px;
+  height: 800px;
+  transition: transform 0.5s;
+  /*animation: rotation 30s infinite linear;*/
+}
+#circle3 div {
+  animation: rotation 30s infinite linear;
 }
 
 @keyframes rotation {
