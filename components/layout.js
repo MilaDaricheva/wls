@@ -16,7 +16,7 @@ function transformCircle(event) {
   let zAxis1 = 5 + zAxis;
   let zAxis2 = 20 + zAxis;
   let zAxis3 = 30 + zAxis;
-  console.log(xAxis, yAxis, zAxis3);
+  //console.log(xAxis, yAxis, zAxis3);
   // 2. Create animations
   //let circleEl = document.getElementById("circle");
   let circleEl1 = document.getElementById("circle1");

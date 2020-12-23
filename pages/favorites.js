@@ -19,9 +19,7 @@ export default function Favorites(props) {
             {siteTitle}
           </h1>
 
-          <p>Why Jamstack?</p>
-
-          <p>Jamstack is an architecture designed to make the web faster, more secure, and easier to scale with help of the following technologies:</p>
+          <p>Jamstack is an architecture designed to make the web faster, more secure, and easier to scale.</p>
 
           <p>Headless CMS makes content accessible via an API for display on any device.</p>
 
@@ -29,11 +27,7 @@ export default function Favorites(props) {
 
           <p>Cloud computing provides scalability.</p>
 
-          <p>Next.js optimizes your application for the best performance by code splitting, client-side navigation, and prefetching data.</p>
-
-          <p>Ghost is very fast and lightweight headless CMS, excellent choice for blogging. </p>
-
-          <p>Strapi CMS is a wonderful choice for e - commerce solutions and other more complex applications. </p >
+          <p>Next.js optimizes your application for the best performance by code splitting and prefetching data.</p>
 
         </main>
       </motion.div>
