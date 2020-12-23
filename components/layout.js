@@ -10,12 +10,13 @@ export const siteTitle = 'WideLine Studio'
 
 function transformCircle(event) {
   // 1. Find mouse position
-  let xAxis = Math.round((window.innerWidth * 0.5 - event.pageX) / (window.innerWidth / 50));
-  let yAxis = Math.round((window.innerHeight * 0.5 - event.pageY) / (window.innerHeight / 50));
-  let zAxis1 = 2 * (xAxis + yAxis);
-  let zAxis2 = 3 * (xAxis + yAxis);
-  let zAxis3 = 4 * (xAxis + yAxis);
-  //console.log(xAxis, yAxis, zAxis3);
+  let xAxis = Math.round((window.innerWidth * 0.5 - event.pageX) / (window.innerWidth / 40));
+  let yAxis = Math.round((window.innerHeight * 0.5 - event.pageY) / (window.innerHeight / 40));
+  let zAxis = Math.abs(xAxis) + Math.abs(yAxis);
+  let zAxis1 = 5 + zAxis;
+  let zAxis2 = 20 + zAxis;
+  let zAxis3 = 30 + zAxis;
+  console.log(xAxis, yAxis, zAxis3);
   // 2. Create animations
   //let circleEl = document.getElementById("circle");
   let circleEl1 = document.getElementById("circle1");

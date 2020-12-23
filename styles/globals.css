@@ -129,50 +129,27 @@ nav .active {
 
 /* BACKGROUND CIRCLES */
 #circle {
-  top:-200px;
-  right:-200px;
+  top:-15%;
+  right:-5%;
   z-index: 1;
   position: absolute;
-  width: 800px;
-  height: 800px;
-  /*transition: transform 0.5s;*/
-  
+  width: 50%;
 }
-#circle1 {
+.circleWrap {
   left: 0;
   top: 0;
+  opacity: 0.6;
   position: absolute;
   display: block;
-  width: 800px;
-  height: 800px;
+  width: 100%;
+  height: 100%;
   transition: transform 0.5s;
-  /*animation: rotation 54s infinite linear;*/
 }
 #circle1 div {
   animation: rotation 54s infinite linear;
 }
-#circle2 {
-  left: 0;
-  top: 0;
-  position: absolute;
-  display: block;
-  width: 800px;
-  height: 800px;
-  transition: transform 0.5s;
-  /*animation: rotationBack 42s infinite linear;*/
-}
 #circle2 div {
   animation: rotationBack 42s infinite linear;
-}
-#circle3 {
-  left: 0;
-  top: 0;
-  position: absolute;
-  display: block;
-  width: 800px;
-  height: 800px;
-  transition: transform 0.5s;
-  /*animation: rotation 30s infinite linear;*/
 }
 #circle3 div {
   animation: rotation 30s infinite linear;
@@ -195,5 +172,14 @@ nav .active {
 
   to {
     transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  #circle {
+    top: -3%;
+    right: -3%;
+    width: 150%;
+    opacity: 0.3;
   }
 }
