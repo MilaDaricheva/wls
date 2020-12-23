@@ -129,11 +129,13 @@ nav .active {
 
 /* BACKGROUND CIRCLES */
 #circle {
-  top:-15%;
-  right:-5%;
+
   z-index: 1;
   position: absolute;
-  width: 50%;
+  top: -30%;
+  right: -30%;
+  width: 150%;
+  opacity: 0.3;
 }
 .circleWrap {
   left: 0;
@@ -177,9 +179,7 @@ nav .active {
 
 @media (max-width: 1024px) {
   #circle {
-    top: -3%;
-    right: -3%;
-    width: 150%;
-    opacity: 0.3;
+    top:0;
+    right: -40%;
   }
 }
