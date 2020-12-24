@@ -47,21 +47,21 @@
 	<style>
 		tspan { white-space:pre }
     .shp0 { fill: black } 
-    .shp00 { fill: none;stroke: url(#grd1);stroke-linecap:round } 
-		.shp1 { fill: none;stroke: url(#grd2);stroke-linecap:round;stroke-width: 2 } 
-		.shp2 { fill: none;stroke: url(#grd3);stroke-linecap:round } 
-		.shp3 { fill: none;stroke: url(#grd4);stroke-linecap:round;stroke-width: 2 }  
+    .shp200 { fill: none;stroke: url(#grd1);stroke-linecap:round } 
+		.shp21 { fill: none;stroke: url(#grd2);stroke-linecap:round;stroke-width: 2 } 
+		.shp22 { fill: none;stroke: url(#grd3);stroke-linecap:round } 
+		.shp23 { fill: none;stroke: url(#grd4);stroke-linecap:round;stroke-width: 2 }  
 	</style>
 	<g >
 		<g mask="url(#stripe2)" >
 
-		<path id="Layer 1" class="shp00" d="M400 767C197.05 767 33 602.95 33 400C33 197.05 197.05 33 400 33C602.95 33 767 197.05 767 400C767 602.95 602.95 767 400 767Z" />
+		<path id="Layer 1" class="shp200" d="M400 767C197.05 767 33 602.95 33 400C33 197.05 197.05 33 400 33C602.95 33 767 197.05 767 400C767 602.95 602.95 767 400 767Z" />
 
-		<path id="Layer 4" class="shp1" d="M419.5 627C295.9 627 196 522.63 196 393.5C196 264.37 295.9 160 419.5 160C543.1 160 643 264.37 643 393.5C643 522.63 543.1 627 419.5 627Z" />
+		<path id="Layer 4" class="shp21" d="M419.5 627C295.9 627 196 522.63 196 393.5C196 264.37 295.9 160 419.5 160C543.1 160 643 264.37 643 393.5C643 522.63 543.1 627 419.5 627Z" />
 
-		<path id="Shape 11" class="shp2" d="M400.5 534C327.23 534 268 474.55 268 401C268 327.45 327.23 268 400.5 268C473.77 268 533 327.45 533 401C533 474.55 473.77 534 400.5 534Z" />
+		<path id="Shape 11" class="shp22" d="M400.5 534C327.23 534 268 474.55 268 401C268 327.45 327.23 268 400.5 268C473.77 268 533 327.45 533 401C533 474.55 473.77 534 400.5 534Z" />
 
-		<path id="Shape 12" class="shp3" d="M400.5 452C370.91 452 347 428.98 347 400.5C347 372.02 370.91 349 400.5 349C430.09 349 454 372.02 454 400.5C454 428.98 430.09 452 400.5 452Z" />
+		<path id="Shape 12" class="shp23" d="M400.5 452C370.91 452 347 428.98 347 400.5C347 372.02 370.91 349 400.5 349C430.09 349 454 372.02 454 400.5C454 428.98 430.09 452 400.5 452Z" />
 
 		</g>
 	</g>

@@ -49,15 +49,15 @@
 	<style>
 		tspan { white-space:pre }
     .shp0 { fill: black } 
-		.shp00 { fill: none;stroke: url(#grd1);stroke-linecap:round } 
-		.shp1 { fill: none;stroke: url(#grd2);stroke-linecap:round;stroke-width: 2 } 
-		.shp2 { fill: none;stroke: url(#grd3);stroke-linecap:round } 
-		.shp3 { fill: none;stroke: url(#grd4);stroke-linecap:round;stroke-width: 2 } 
+		.shp100 { fill: none;stroke: url(#grd1);stroke-linecap:round } 
+		.shp11 { fill: none;stroke: url(#grd2);stroke-linecap:round;stroke-width: 2 } 
+		.shp12 { fill: none;stroke: url(#grd3);stroke-linecap:round } 
+		.shp13 { fill: none;stroke: url(#grd4);stroke-linecap:round;stroke-width: 2 } 
 	</style>
 	<g mask="url(#stripe)" >
-			<path id="Shape 22" class="shp00" d="M401 788C189.2 788 18 615.01 18 401C18 186.99 189.2 14 401 14C612.8 14 784 186.99 784 401C784 615.01 612.8 788 401 788Z" />
-			<path id="Shape 22" class="shp1" d="M400.5 706C229.9 706 92 569.22 92 400C92 230.78 229.9 94 400.5 94C571.1 94 709 230.78 709 400C709 569.22 571.1 706 400.5 706Z" />
-			<path id="Shape 22" class="shp2" d="M400.5 614C289.62 614 200 518.79 200 401C200 283.21 289.62 188 400.5 188C511.38 188 601 283.21 601 401C601 518.79 511.38 614 400.5 614Z" />
-			<path id="Shape 22" class="shp3" d="M401 516C336.85 516 285 464.15 285 400C285 335.85 336.85 284 401 284C465.15 284 517 335.85 517 400C517 464.15 465.15 516 401 516Z" />
+			<path id="Shape 22" class="shp100" d="M401 788C189.2 788 18 615.01 18 401C18 186.99 189.2 14 401 14C612.8 14 784 186.99 784 401C784 615.01 612.8 788 401 788Z" />
+			<path id="Shape 22" class="shp11" d="M400.5 706C229.9 706 92 569.22 92 400C92 230.78 229.9 94 400.5 94C571.1 94 709 230.78 709 400C709 569.22 571.1 706 400.5 706Z" />
+			<path id="Shape 22" class="shp12" d="M400.5 614C289.62 614 200 518.79 200 401C200 283.21 289.62 188 400.5 188C511.38 188 601 283.21 601 401C601 518.79 511.38 614 400.5 614Z" />
+			<path id="Shape 22" class="shp13" d="M401 516C336.85 516 285 464.15 285 400C285 335.85 336.85 284 401 284C465.15 284 517 335.85 517 400C517 464.15 465.15 516 401 516Z" />
 	</g>
 </svg>

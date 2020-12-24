@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="8.287" y1="717.53" x2="329.513" y2="161.15">
+			<stop offset="0.199" stop-color="#00b7aa"  />
+			<stop offset="0.797" stop-color="#bbbbbe"  />
+		</linearGradient>
+    <mask id="stripe4">
+      <rect x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            fill="white" />
+	    <path id="Shape 23" class="shp0" d="M236.15 480.18L383 562.55L337.43 748.81L64.36 587.52L236.15 480.18Z" />
+	    <path id="Shape 24" class="shp0" d="M400 48.11L779.02 287.73L616.55 367.34L400 247.14L400 48.11Z" />
+    </mask>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp001 { fill: none;stroke: url(#grd1);stroke-width: 11 } 
+	</style>
+	<path mask="url(#stripe4)" id="Shape 22" class="shp001" d="M400.5 681C240.41 681 111 555.39 111 400C111 244.61 240.41 119 400.5 119C560.59 119 690 244.61 690 400C690 555.39 560.59 681 400.5 681Z" />
+</svg>

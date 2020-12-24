@@ -14,6 +14,7 @@ function transformCircle(event) {
   let yAxis = Math.round((window.innerHeight * 0.5 - event.pageY) / (window.innerHeight / 40));
   let zAxis = Math.abs(xAxis) + Math.abs(yAxis);
   let zAxis1 = 5 + zAxis;
+  let zAxis4 = 10 + zAxis;
   let zAxis2 = 20 + zAxis;
   let zAxis3 = 30 + zAxis;
   //console.log(xAxis, yAxis, zAxis3);
@@ -22,10 +23,12 @@ function transformCircle(event) {
   let circleEl1 = document.getElementById("circle1");
   let circleEl2 = document.getElementById("circle2");
   let circleEl3 = document.getElementById("circle3");
+  let circleEl4 = document.getElementById("circle4");
   //circleEl.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
   circleEl1.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateZ(${zAxis1}px)`;
   circleEl2.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateZ(${zAxis2}px)`;
   circleEl3.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateZ(${zAxis3}px)`;
+  circleEl4.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateZ(${zAxis4}px)`;
 }
 
 function Layout({ router, children }) {

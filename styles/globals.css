@@ -129,7 +129,6 @@ nav .active {
 
 /* BACKGROUND CIRCLES */
 #circle {
-
   z-index: 1;
   position: absolute;
   top: -30%;
@@ -147,14 +146,18 @@ nav .active {
   height: 100%;
   transition: transform 0.5s;
 }
+
 #circle1 div {
-  animation: rotation 54s infinite linear;
+  animation: rotation 60s infinite linear;
 }
 #circle2 div {
-  animation: rotationBack 42s infinite linear;
+  animation: rotationBack 50s infinite linear;
 }
 #circle3 div {
-  animation: rotation 30s infinite linear;
+  animation: rotation 50s infinite linear;
+}
+#circle4 div {
+  animation: rotation 40s infinite linear;
 }
 
 @keyframes rotation {

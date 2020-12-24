@@ -46,15 +46,15 @@
 	</defs>
 	<style>
 		tspan { white-space:pre }
-		.shp00 { fill: none;stroke: url(#grd1);stroke-linecap:round;stroke-width: 2 } 
-		.shp1 { fill: none;stroke: url(#grd2);stroke-linecap:round } 
-		.shp2 { fill: none;stroke: url(#grd3);stroke-linecap:round;stroke-width: 2 } 
+		.shp300 { fill: none;stroke: url(#grd1);stroke-linecap:round;stroke-width: 2 } 
+		.shp31 { fill: none;stroke: url(#grd2);stroke-linecap:round } 
+		.shp32 { fill: none;stroke: url(#grd3);stroke-linecap:round;stroke-width: 2 } 
 	</style>
 	<g >
 		<g mask="url(#stripe3)" >
-    	<path id="Shape 22" class="shp00" d="M401 481C357.87 481 323 445.24 323 401C323 356.76 357.87 321 401 321C444.13 321 479 356.76 479 401C479 445.24 444.13 481 401 481Z" />
-			<path id="Shape 22" class="shp1" d="M400.5 557C313.96 557 244 487.27 244 401C244 314.73 313.96 245 400.5 245C487.04 245 557 314.73 557 401C557 487.27 487.04 557 400.5 557Z" />
-			<path id="Shape 22" class="shp2" d="M400 657C255.67 657 139 542.34 139 400.5C139 258.66 255.67 144 400 144C544.33 144 661 258.66 661 400.5C661 542.34 544.33 657 400 657Z" />
+    	<path id="Shape 22" class="shp300" d="M401 481C357.87 481 323 445.24 323 401C323 356.76 357.87 321 401 321C444.13 321 479 356.76 479 401C479 445.24 444.13 481 401 481Z" />
+			<path id="Shape 22" class="shp31" d="M400.5 557C313.96 557 244 487.27 244 401C244 314.73 313.96 245 400.5 245C487.04 245 557 314.73 557 401C557 487.27 487.04 557 400.5 557Z" />
+			<path id="Shape 22" class="shp32" d="M400 657C255.67 657 139 542.34 139 400.5C139 258.66 255.67 144 400 144C544.33 144 661 258.66 661 400.5C661 542.34 544.33 657 400 657Z" />
     </g>
 	</g>
 </svg>
