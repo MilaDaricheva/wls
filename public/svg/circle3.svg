@@ -46,6 +46,7 @@
 	</defs>
 	<style>
 		tspan { white-space:pre }
+    .shp0 { fill: black } 
 		.shp300 { fill: none;stroke: url(#grd1);stroke-linecap:round;stroke-width: 2 } 
 		.shp31 { fill: none;stroke: url(#grd2);stroke-linecap:round } 
 		.shp32 { fill: none;stroke: url(#grd3);stroke-linecap:round;stroke-width: 2 } 

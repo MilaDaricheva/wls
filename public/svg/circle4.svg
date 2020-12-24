@@ -16,7 +16,8 @@
 	</defs>
 	<style>
 		tspan { white-space:pre }
-		.shp001 { fill: none;stroke: url(#grd1);stroke-width: 11 } 
+    .shp0 { fill: black } 
+		.shp001 { fill: none;stroke: url(#grd1);stroke-width: 3 } 
 	</style>
 	<path mask="url(#stripe4)" id="Shape 22" class="shp001" d="M400.5 681C240.41 681 111 555.39 111 400C111 244.61 240.41 119 400.5 119C560.59 119 690 244.61 690 400C690 555.39 560.59 681 400.5 681Z" />
 </svg>

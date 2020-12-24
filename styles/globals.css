@@ -131,10 +131,12 @@ nav .active {
 #circle {
   z-index: 1;
   position: absolute;
-  top: -30%;
-  right: -30%;
-  width: 150%;
+  top: 0;
+  left: 40%;
+  width: 100%;
+  height: 100%;
   opacity: 0.3;
+  transition: transform 0.5s;
 }
 .circleWrap {
   left: 0;
@@ -144,17 +146,17 @@ nav .active {
   display: block;
   width: 100%;
   height: 100%;
-  transition: transform 0.5s;
 }
-
+/*
 #circle1 div {
   animation: rotation 60s infinite linear;
 }
-#circle2 div {
-  animation: rotationBack 50s infinite linear;
-}
 #circle3 div {
   animation: rotation 50s infinite linear;
+}
+*/
+#circle2 div {
+  animation: rotationBack 50s infinite linear;
 }
 #circle4 div {
   animation: rotation 40s infinite linear;
@@ -183,6 +185,8 @@ nav .active {
 @media (max-width: 1024px) {
   #circle {
     top:0;
-    right: -40%;
+    left:0;
+    width:200%;
+    height:200%;
   }
 }

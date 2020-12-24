@@ -48,10 +48,10 @@
 	</defs>
 	<style>
 		tspan { white-space:pre }
-    .shp0 { fill: black } 
-		.shp100 { fill: none;stroke: url(#grd1);stroke-linecap:round } 
+    .shp10 { fill: black } 
+		.shp100 { fill: none;stroke: url(#grd1);stroke-linecap:round;stroke-width: 1  } 
 		.shp11 { fill: none;stroke: url(#grd2);stroke-linecap:round;stroke-width: 2 } 
-		.shp12 { fill: none;stroke: url(#grd3);stroke-linecap:round } 
+		.shp12 { fill: none;stroke: url(#grd3);stroke-linecap:round;stroke-width: 1  } 
 		.shp13 { fill: none;stroke: url(#grd4);stroke-linecap:round;stroke-width: 2 } 
 	</style>
 	<g mask="url(#stripe)" >
