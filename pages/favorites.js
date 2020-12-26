@@ -19,15 +19,11 @@ export default function Favorites(props) {
             {siteTitle}
           </h1>
 
-          <p>Jamstack is an architecture designed to make the web faster, more secure, and easier to scale.</p>
-
-          <p>Headless CMS makes content accessible via an API for display on any device.</p>
-
           <p>REST APIs give us flexibility.</p>
 
           <p>Cloud computing provides scalability.</p>
 
-          <p>Next.js optimizes your application for the best performance by code splitting and prefetching data.</p>
+          <p>Headless CMS makes content accessible via an API for display on any device.</p>
 
         </main>
       </motion.div>

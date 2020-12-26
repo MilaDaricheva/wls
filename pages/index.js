@@ -23,8 +23,8 @@ export default function Home() {
           </h1>
 
           <p>Coding modern web designs using modern web technologies.</p>
-          <p>You wait too long for your custom design to be implemented?</p>
-          <p>WideLine Studio is using only best practices to save time and cost of development process.</p>
+          <p>Tired of old and hard to scale platforms?</p>
+          <p>WideLine Studio is using only best practices to deliver high quality solutions.</p>
 
         </main>
       </motion.div>
