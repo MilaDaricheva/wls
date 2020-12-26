@@ -21,11 +21,9 @@ export default function Home() {
           <h1 className={styles.title}>
             {siteTitle}
           </h1>
-
-          <p>Coding modern web designs using modern web technologies.</p>
-          <p>Tired of old and hard to scale platforms?</p>
+          <p>Tired of old and hard to extend platforms?</p>
           <p>WideLine Studio is using only best practices to deliver high quality solutions.</p>
-
+          <p>Coding modern web designs using modern web technologies.</p>
         </main>
       </motion.div>
     </div>

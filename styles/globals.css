@@ -126,6 +126,11 @@ nav {
   border-bottom: 1px solid var(--color-light-2);
   background: var(--color-light-1);
 }
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
 nav li {
   display: inline;
 }
@@ -139,13 +144,17 @@ nav a {
   transition: all 0.5s ease-in-out;
 
 }
-
 nav a:hover {
     color: var(--color-dark-5);
 
 }
 nav .active {
   color: var(--color-dark-4);
+}
+@media (max-width: 768px) {
+  nav ul {
+    justify-content: space-between;
+  }
 }
 
 /* BACKGROUND CIRCLES */
