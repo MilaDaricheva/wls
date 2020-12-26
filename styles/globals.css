@@ -107,8 +107,8 @@ h1, h2, h3, h4 {
 }
 h1 {
   font-size: 2.5em;
-  line-height: 2.5em;
-  padding-bottom: 1em;
+  line-height: 2em;
+  padding-bottom: 0.7em;
 }
 h2 {
   font-size: 1.8em;
@@ -118,7 +118,7 @@ h2 {
 p {
   font-size: 1.5em;
   line-height: 1.5em;
-  padding-bottom: 1em;
+  padding-bottom: 0.7em;
 }
 
 /* NAVIGATION */
@@ -132,29 +132,17 @@ nav li {
 nav a {
   font-size: 1.5em;
   line-height: 1.5em;
-  padding: 1em;
+  padding: 0.3em 1em;
   display: inline-block;
   text-decoration: none;
   color: var(--color-dark-1);
   transition: all 0.5s ease-in-out;
-  position: relative;
+
 }
-nav a::before {
-  margin: 1em;
-  content: attr(data-item);
-  transition: 0.5s;
-  color: var(--color-dark-5);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 0;
-  overflow: hidden;
-}
-nav a:hover::before {
-    width: 100%;
-    transition: all 0.5s ease-in-out;
+
+nav a:hover {
+    color: var(--color-dark-5);
+
 }
 nav .active {
   color: var(--color-dark-4);
