@@ -6,6 +6,7 @@
   --color-dark-2: #bbbfca;
   --color-dark-3: #bbbbbe;
   --color-dark-4: #00B7AA;
+  --color-dark-5: #30928A;
   /* 1D5575 4496A1 141217 */
   /* A9A659 B74645 */
 
@@ -130,10 +131,30 @@ nav li {
 }
 nav a {
   font-size: 1.5em;
+  line-height: 1.5em;
   padding: 1em;
   display: inline-block;
   text-decoration: none;
   color: var(--color-dark-1);
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+nav a::before {
+  margin: 1em;
+  content: attr(data-item);
+  transition: 0.5s;
+  color: var(--color-dark-5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+}
+nav a:hover::before {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
 }
 nav .active {
   color: var(--color-dark-4);

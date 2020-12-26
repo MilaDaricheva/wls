@@ -8,17 +8,17 @@ export default function Nav() {
       <ul className="nav">
         <li>
           <Link activeClassName="active" href="/">
-            <a>Home</a>
+            <a data-item='Home' >Home</a>
           </Link>
         </li>
         <li>
           <Link activeClassName="active" href="/favorites">
-            <a>Favorites</a>
+            <a data-item='Favorites' >Favorites</a>
           </Link>
         </li>
         <li>
           <Link activeClassName="active" href="/contact">
-            <a>Contact</a>
+            <a data-item='Contact' >Contact</a>
           </Link>
         </li>
       </ul>
