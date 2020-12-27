@@ -1,10 +1,11 @@
 import { Component } from "react"
 import { sendContactMail } from "../components/mail-api"
+import styles from '../styles/form.module.css'
 
 class ContactForm extends Component {
   state = {
     formButtonDisabled: false,
-    responseMessage: "Get in touch:",
+    responseMessage: "Let's get to work",
     name: "",
     mail: "",
     formContent: ""
@@ -16,22 +17,24 @@ class ContactForm extends Component {
     const btnClass = formButtonDisabled ? "disabled" : ""
 
     return (
-      <form>
+      <form className={styles.form}>
         <p>{responseMessage}</p>
-        <fieldset>
-          <input placeholder="Your name" type="text" tabIndex="1" value={name} name="fname" onChange={this.onNameChange} required autoFocus />
-        </fieldset>
-        <fieldset>
-          <input placeholder="Your Email Address" type="email" tabIndex="2" value={mail} name="femail" onChange={this.onMailChange} required />
-        </fieldset>
-        <fieldset>
-          <textarea placeholder="Type your Message Here...." tabIndex="3" value={formContent} name="ftext" onChange={this.onFormContentChange} required></textarea>
-        </fieldset>
-        <fieldset>
-          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" className={btnClass}
-            onClick={this.submitContactForm}
-            disabled={formButtonDisabled} >Submit</button>
-        </fieldset>
+        <div>
+          <fieldset>
+            <input placeholder="Your name" type="text" tabIndex="1" value={name} name="fname" onChange={this.onNameChange} required autoFocus />
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Email Address" type="email" tabIndex="2" value={mail} name="femail" onChange={this.onMailChange} required />
+          </fieldset>
+          <fieldset>
+            <textarea placeholder="Type your Message Here...." tabIndex="3" value={formContent} name="ftext" onChange={this.onFormContentChange} required></textarea>
+          </fieldset>
+          <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" className={btnClass}
+              onClick={this.submitContactForm}
+              disabled={formButtonDisabled} >Submit</button>
+          </fieldset>
+        </div>
       </form>
     )
   }

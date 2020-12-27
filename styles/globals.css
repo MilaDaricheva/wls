@@ -120,7 +120,10 @@ p {
   line-height: 1.5em;
   padding-bottom: 0.7em;
 }
-
+/* MAIN LAYOUT */
+.mainWrap {
+  width: 100%;
+}
 /* NAVIGATION */
 nav {
   border-bottom: 1px solid var(--color-light-2);

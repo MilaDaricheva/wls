@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styles from '../styles/core.module.css'
 import staticVars from '../utils/staticvars'
 import { motion } from "framer-motion"
 
@@ -10,7 +9,7 @@ export default function Home() {
   //console.log("VARS", staticVars.pageTransition);
 
   return (
-    <div>
+    <div className="mainWrap">
 
       <Head>
         <title>{siteTitle}</title>
@@ -18,7 +17,7 @@ export default function Home() {
 
       <motion.div id="home" initial="exit" animate="enter" exit="exit" variants={staticVars.pageTransition}>
         <main>
-          <h1 className={styles.title}>
+          <h1>
             {siteTitle}
           </h1>
           <p>Tired of old and hard to extend platforms?</p>
