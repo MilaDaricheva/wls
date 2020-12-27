@@ -8,10 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "fontsource-barlow-condensed": "^3.1.5",
     "framer-motion": "^3.0.0",
     "next": "10.0.3",
-    "next-react-svg": "1.1.2",
+    "next-react-svg": "^1.1.2",
+    "nodemailer": "^6.4.17",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   }
