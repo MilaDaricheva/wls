@@ -18,6 +18,7 @@ function transformCircle(event) {
   let circleEl = document.getElementById("circle");
 
   circleEl.style.transform = `rotateY(${-xAxis}deg) rotateX(${-yAxis}deg)`;
+
 }
 
 function Layout({ router, children }) {
