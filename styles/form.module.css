@@ -2,6 +2,10 @@
   display: block;
 }
 
+.fieldWrap {
+  width: 50%
+}
+
 .form fieldset {
   border: none;
   margin: 0 0 0.5em;
@@ -15,16 +19,87 @@
   padding: 5px;
   font-size: 1em;
   line-height: 1em;
-  color: var(--color-dark-1);
+  color: var(--color-dark-1) !important;
   border: 1px solid var(--color-light-2);
   background-color: var(--color-light-1);
-  
 }
-
+.form textarea {
+  resize: none;
+  overflow: auto;
+}
 .form input:focus,
 .form textarea:focus {
   border: 1px solid var(--color-dark-3);
   outline: none;
+}
+
+
+.btn {
+    width: 100px;
+    height: 50px;
+    border: 1px solid var(--color-dark-3);
+    background-color: var(--color-light-2);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+    transition: 0.5s;
+}
+.btn button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  color: var(--color-dark-1) !important;
+  outline: none;
+  position: relative;
+  z-index: 6;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn::before,
+.btn::after {
+  position: absolute;
+  background-color: var(--color-light-2);
+  z-index: 4;
+  transition: 0.5s;
+  content: '';
+}
+
+.btn::before {
+  height: 50px;
+  width: 70px;
+}
+
+.btn::after {
+  width: 100px;
+  height: 30px;
+}
+
+.btn:hover::before {
+  width: 0px;
+  background-color: var(--color-light-1);
+}
+
+.btn:hover::after {
+  height: 0px;
+  background-color: var(--color-light-1);
+}
+
+.btn:hover {
+  background-color: var(--color-light-1);
 }
 
 /* Change Autocomplete styles*/
@@ -39,7 +114,26 @@
 .form select:-webkit-autofill:focus {
   border: 1px solid var(--color-light-2);
   -webkit-text-fill-color: var(--color-dark-1);
+  box-shadow: 0 0 0px 1000px var(--color-light-1) inset;
   -webkit-box-shadow: 0 0 0px 1000px var(--color-light-1) inset;
   transition: background-color 5000s ease-in-out 0s;
-
 }
+
+.form input::placeholder,
+.form textarea::placeholder,
+.form input:-ms-input-placeholder,
+.form textarea:-ms-input-placeholder,
+.form input::-ms-input-placeholder,
+.form textarea::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--color-dark-3);
+  opacity: 1;
+  /* Firefox */
+}
+
+@media (max-width: 1024px) {
+  .fieldWrap {
+    width: 100%
+  }
+}
+

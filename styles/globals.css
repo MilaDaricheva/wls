@@ -145,12 +145,19 @@ nav a {
   text-decoration: none;
   color: var(--color-dark-1);
   transition: all 0.5s ease-in-out;
+  outline: none;
+
 }
 nav a:hover {
     color: var(--color-dark-5);
 }
 nav .active {
   color: var(--color-dark-4);
+}
+nav a:focus {
+  outline-style: solid;
+  outline-color: var(--color-dark-1);
+  outline-width: 1px;
 }
 @media (max-width: 768px) {
   nav ul {
