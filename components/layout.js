@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Nav from '../components/nav'
 import MainSvg from '../components/mainsvg'
-import styles from '../styles/core.module.css'
 import { withRouter } from 'next/router'
 import coreUtils from '../utils/coreutils'
 import { motion } from "framer-motion"
@@ -28,20 +27,20 @@ function Layout({ router, children }) {
   //console.log("PAGEID", pgId);
 
   return (
-    <div className={styles.container}>
+    <div className="container">
       <Head>
         <title>{siteTitle}</title>
         <meta name="description" content="Coding modern web designs using modern technologies."></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.wrapper}>
+      <div className="wrapper">
         <Nav />
 
-        <motion.div className={styles.main} width={"100%"} height={"100%"} position={"relative"} onMouseMove={transformCircle}>
+        <motion.div className="main" width={"100%"} height={"100%"} position={"relative"} onMouseMove={transformCircle}>
           {children}
         </motion.div>
 
-        <footer className={styles.footer}>
+        <footer className="footer">
           WideLine Studio &copy;2020
         </footer>
       </div>
