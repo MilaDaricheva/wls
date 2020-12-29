@@ -1,13 +1,10 @@
 import axios from "axios"
 
-export const sendContactMail = async (name, senderMail, message) => {
-  const data = {
-    name,
-    senderMail,
-    message
-  }
+export const sendContactMail = async (fields) => {
 
-  console.log(data.message);
+  const data = fields;
+
+  //console.log(fields);
 
   try {
     const res = await axios({
