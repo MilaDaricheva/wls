@@ -30,7 +30,7 @@ function Layout({ router, children }) {
     <div className="container">
       <Head>
         <title>{siteTitle}</title>
-        <meta name="description" content="Coding modern web designs using modern technologies."></meta>
+        <meta name="description" content="Coding modern web designs using modern web technologies."></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="wrapper">

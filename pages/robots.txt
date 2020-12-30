@@ -1,0 +1,6 @@
+Sitemap: https://wideline-studio.com/api/sitemap
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*
