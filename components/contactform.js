@@ -17,7 +17,7 @@ let schemaOptions = {
 class ContactForm extends Component {
   state = {
     formButtonDisabled: false,
-    responseMessage: "",
+    responseMessage: "Send us a message",
     name: "",
     mail: "",
     formContent: "",
@@ -29,7 +29,7 @@ class ContactForm extends Component {
   render() {
     const { formButtonDisabled, responseMessage, name, mail, formContent, namePl, mailPl, formContentPl } = this.state
 
-    const btnClass = formButtonDisabled ? styles.disabled : ""
+    const btnVisClass = formButtonDisabled ? styles.noShow : ""
 
     return (
       <form className={styles.form}>
@@ -45,8 +45,8 @@ class ContactForm extends Component {
             <textarea placeholder={formContentPl} tabIndex="3" value={formContent} name="ftext" onChange={this.onFormContentChange} cols="30" rows="5" required></textarea>
           </fieldset>
           <fieldset>
-            <div className={styles.btn}>
-              <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" className={btnClass}
+            <div className={`${styles.btn} ${btnVisClass}`} >
+              <button name="submit" type="submit" id="contact-submit" data-submit="...Sending"
                 onClick={this.submitContactForm}
                 disabled={formButtonDisabled} >Submit</button>
             </div>
@@ -88,7 +88,7 @@ class ContactForm extends Component {
       if (res.status < 300) {
         this.setState({
           formButtonDisabled: true,
-          responseMessage: "Message was sent. We will get back to you shortly."
+          responseMessage: "Thank you. We will get back to you shortly."
         })
 
       } else {

@@ -47,6 +47,7 @@
     position: relative;
     z-index: 5;
     transition: 0.5s;
+    opacity: 1;
 }
 .btn button {
   background-color: transparent;
@@ -68,8 +69,8 @@
     -ms-user-select: none;
     user-select: none;
 }
-.disabled {
-  color: var(--color-light-1) !important;
+.noShow {
+  opacity: 0 !important;
 }
 
 .btn::before,
