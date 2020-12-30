@@ -11,6 +11,10 @@
   /* A9A659 B74645 */
 
   --size-1: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+
+  --scrollbar-width: calc(100vw - 100%);
+  --screen-full-width: calc(100vw * 1);
+  --screen-half-width: calc(100vw / 2);
 }
 
 /* RESET CSS */
@@ -129,7 +133,6 @@ p {
   position: relative;
   overflow: hidden;
 }
-
 .wrapper {
   position: relative;
   z-index: 2;
@@ -137,17 +140,14 @@ p {
   display: flex;
   flex-direction: column;
 }
-
 .main {
   flex: 1;
   display: flex;
   align-items: center;
 }
-
 .main main {
   padding: 1.5em;
 }
-
 .footer {
   display: flex;
   width: 100%;
@@ -180,7 +180,6 @@ nav a {
   color: var(--color-dark-1);
   transition: all 0.5s ease-in-out;
   outline: none;
-
 }
 nav a:hover {
     color: var(--color-dark-5);
@@ -202,9 +201,9 @@ nav a:focus {
   z-index: 1;
   position: absolute;
   top: 0;
-  left: 40%;
-  width: 100%;
-  height: 100%;
+  left: var(--screen-half-width);
+  width: var(--screen-full-width);
+  height: var(--screen-full-width); /* Heights of the svgs are the same */
   opacity: 0.3;
   transition: transform 0.5s, opacity 15s;
   animation: opacityChange 15s infinite ease-out alternate;
@@ -212,7 +211,6 @@ nav a:focus {
 .circleWrap {
   left: 0;
   top: 0;
-  opacity: 0.6;
   position: absolute;
   display: block;
   width: 100%;
@@ -232,6 +230,17 @@ nav a:focus {
 }
 #circle4 div {
   animation: rotation 40s infinite linear;
+}
+
+@media (max-width: 1024px) {
+  #circle {
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+    width: calc(2*var(--screen-full-width));
+    height: calc(2*var(--screen-full-width)); /* Heights of the svgs are the same */
+    animation: opacityChangeMobile 15s infinite ease-out alternate;
+  }
 }
 
 @keyframes rotation {
@@ -268,11 +277,18 @@ nav a:focus {
   }
 }
 
-@media (max-width: 1024px) {
-  #circle {
-    top:0;
-    left:0;
-    width:200%;
-    height:200%;
+@keyframes opacityChangeMobile {
+  0% {
+    opacity: 0.1;
+  }
+
+  70% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0.3;
   }
 }
+
+
