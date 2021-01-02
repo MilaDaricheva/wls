@@ -185,7 +185,7 @@ nav a:hover {
     color: var(--color-dark-5);
 }
 nav .active {
-  color: var(--color-dark-4);
+  color: var(--color-dark-5);
 }
 nav a:focus {
   outline: none;
