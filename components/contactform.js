@@ -2,6 +2,8 @@ import { Component } from "react"
 import { sendContactMail } from "../components/mail-api"
 import styles from '../styles/form.module.css'
 import * as yup from 'yup';
+import staticVars from '../utils/staticvars'
+import { motion } from "framer-motion"
 
 let schema = yup.object().shape({
   name: yup.string("name").required("name"),
@@ -32,7 +34,7 @@ class ContactForm extends Component {
     const btnVisClass = formButtonDisabled ? styles.noShow : ""
 
     return (
-      <form className={styles.form}>
+      <motion.form className={styles.form} initial="exit" animate="enter" exit="exit" variants={staticVars.pageTransition}>
         <p>{responseMessage}</p>
         <div className={styles.fieldWrap}>
           <fieldset>
@@ -48,11 +50,11 @@ class ContactForm extends Component {
             <div className={`${styles.btn} ${btnVisClass}`} >
               <button name="submit" type="submit" id="contact-submit" data-submit="...Sending"
                 onClick={this.submitContactForm}
-                disabled={formButtonDisabled} >Submit</button>
+                disabled={formButtonDisabled} >Send</button>
             </div>
           </fieldset>
         </div>
-      </form>
+      </motion.form>
     )
   }
 
