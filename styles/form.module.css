@@ -17,11 +17,12 @@
   width: 100%;
   margin: 0;
   padding: 5px;
-  font-size: 1em;
-  line-height: 1em;
+  font-size: 0.8em;
+  line-height: 0.8em;
   color: var(--color-dark-1) !important;
   border: 1px solid var(--color-light-2);
   background-color: var(--color-light-1);
+  transition: all 0.5s ease-in-out;
 }
 .form textarea {
   resize: none;
@@ -35,8 +36,8 @@
 
 
 .btn {
-    width: 100px;
-    height: 50px;
+    width: 5em;
+    height: 2em;
     border: 1px solid var(--color-dark-3);
     background-color: var(--color-light-2);
     cursor: pointer;
@@ -53,6 +54,8 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  font-size: 1em;
+  line-height: 2em;
   width: 100%;
   height: 100%;
   padding: 0;
@@ -83,13 +86,13 @@
 }
 
 .btn::before {
-  height: 50px;
-  width: 70px;
+  height: 2em;
+  width: 4em;
 }
 
 .btn::after {
-  width: 100px;
-  height: 30px;
+  width: 5em;
+  height: 1.5em;
 }
 
 .btn:hover::before {

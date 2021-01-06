@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Logo from '../components/logosvg'
 import Nav from '../components/nav'
 import MainSvg from '../components/mainsvg'
 import { withRouter } from 'next/router'
@@ -38,7 +39,10 @@ function Layout({ router, children }) {
         <link rel="icon" href="/favicon.png" type="image/png" />
       </Head>
       <div className="wrapper">
-        <Nav />
+        <div className="headerWrapper">
+          <Logo />
+          <Nav />
+        </div>
 
         <motion.div className="main" width={"100%"} height={"100%"} position={"relative"} onMouseMove={transformCircle}>
           {children}

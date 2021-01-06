@@ -110,19 +110,14 @@ h1, h2, h3, h4 {
   font-weight: 400;
 }
 h1 {
-  font-size: 2.5em;
+  font-size: 2em;
   line-height: 2em;
-  padding-bottom: 0.7em;
-}
-h2 {
-  font-size: 1.8em;
-  line-height: 1.8em;
-  padding-bottom: 0.7em;
+  padding-bottom: 0.5em;
 }
 p {
-  font-size: 1.5em;
-  line-height: 1.5em;
-  padding-bottom: 0.7em;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  padding-bottom: 0.5em;
 }
 /* MAIN LAYOUT */
 .mainWrap {
@@ -158,23 +153,47 @@ p {
   border-top: 1px solid var(--color-light-2);
   background: var(--color-light-1);
 }
+/* LOGO */
+.logo a {
+  text-decoration: none;
+  display: block;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  padding: 0.3em 1.1em 0.3em 1em;
+  position: relative;
+}
+.logo a svg {
+  transition: all .7s ease-in-out;
+  transform-origin: center right;
+}
+.logo a:hover #circleLogo {
+  transform: rotate(360deg);
+}
+.logo a #circleLogo {
+  position: relative;
+  margin-left:0.15em;
+}
 /* NAVIGATION */
-nav {
+.headerWrapper {
   border-bottom: 1px solid var(--color-light-2);
   background: var(--color-light-1);
-}
-nav ul {
+
   display: flex;
+  align-items: center;
+  justify-content: space-around;
   flex-wrap: wrap;
-  align-items: flex-start;
+}
+
+nav ul {
+  text-align: center;
 }
 nav li {
   display: inline;
 }
 nav a {
-  font-size: 1.5em;
-  line-height: 1.5em;
-  padding: 0.3em 1em;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  padding: 0.5em 1em;
   display: inline-block;
   text-decoration: none;
   color: var(--color-dark-1);
@@ -182,7 +201,7 @@ nav a {
   outline: none;
 }
 nav a:hover {
-    color: var(--color-dark-5);
+  color: var(--color-dark-5);
 }
 nav .active {
   color: var(--color-dark-5);
@@ -190,8 +209,8 @@ nav .active {
 nav a:focus {
   outline: none;
 }
-@media (max-width: 768px) {
-  nav ul {
+@media (min-width: 540px) {
+  .headerWrapper {
     justify-content: space-between;
   }
 }

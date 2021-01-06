@@ -1,0 +1,17 @@
+<svg id="circleLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" width="0.7em" height="0.7em">
+	<defs>
+		<linearGradient id="grdL1" gradientUnits="userSpaceOnUse"  x1="6.381" y1="19" x2="15.619" y2="3">
+			<stop offset="0" stop-color="#bbbfca"  />
+			<stop offset="1" stop-color="#e8e8e8"  />
+		</linearGradient>
+		<linearGradient id="grdL2" gradientUnits="userSpaceOnUse"  x1="6.381" y1="19" x2="15.619" y2="3">
+			<stop offset="0" stop-color="#30928a"  />
+			<stop offset="1" stop-color="#00b7aa"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shpL0 { fill: url(#grdL1);stroke: url(#grdL2);stroke-linecap:round;stroke-width: 5 } 
+	</style>
+	<path id="Shape 3" class="shpL0" d="M11 19C6.58 19 3 15.42 3 11C3 6.58 6.58 3 11 3C15.42 3 19 6.58 19 11C19 15.42 15.42 19 11 19Z" />
+</svg>
