@@ -43,10 +43,9 @@ function Layout({ router, children }) {
           <Logo />
           <Nav />
         </div>
-
-        <motion.div className="main" width={"100%"} height={"100%"} position={"relative"} onMouseMove={transformCircle}>
+        <div className="main" onMouseMove={transformCircle}>
           {children}
-        </motion.div>
+        </div>
 
         <footer className="footer">
           WideLine Studio &copy;2021
