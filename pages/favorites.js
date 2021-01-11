@@ -4,8 +4,8 @@ import { motion } from "framer-motion"
 
 const siteTitle = 'Our Favorites'
 
-export default function Favorites(props) {
-  console.log(props.dataFromParent);
+export default function Favorites() {
+
   return (
     <div className="mainWrap">
 

@@ -1,25 +1,57 @@
 import { Component } from "react"
+import { useState, useEffect } from 'react';
 import { sendContactMail } from "../components/mail-api"
-import styles from '../styles/form.module.css'
 import * as yup from 'yup';
-import staticVars from '../utils/staticvars'
 import { motion } from "framer-motion"
+import { useAnimation } from "framer-motion";
+
 
 let schema = yup.object().shape({
   name: yup.string("name").required("name"),
   mail: yup.string("mail").required("mail").email("mail"),
   formContent: yup.string("formContent").required("formContent")
 });
-/*
-let schemaOptions = {
-  strict: false,
-  abortEarly: false
+
+const FormMessage = (props) => {
+  const controls = useAnimation()
+
+  const [note, setNote] = useState("Send us a message");
+  const [noteKey, setNoteKey] = useState("intro");
+
+  const messageVariants = {
+    fadein: { opacity: 1 },
+    fadeout: { opacity: 0 }
+  }
+
+  useEffect(() => {
+    const sequence = async () => {
+      //console.log("USE Effect")
+      if (props.noteKey !== "intro") {
+        await controls.start("fadeout")
+        setNoteKey(props.noteKey)
+        setNote(props.note)
+        await controls.start("fadein")
+      }
+
+    };
+    sequence();
+  }, [props.note])
+
+  return < motion.p
+    className={noteKey}
+    variants={messageVariants}
+    animate={controls}
+    transition={{ duration: 0.5 }}
+  >
+    {note}
+  </motion.p>
 }
-*/
+
 class ContactForm extends Component {
   state = {
-    formButtonDisabled: false,
+    formDisabled: false,
     responseMessage: "Send us a message",
+    statusNoteKey: "intro",
     name: "",
     mail: "",
     formContent: "",
@@ -29,14 +61,16 @@ class ContactForm extends Component {
   }
 
   render() {
-    const { formButtonDisabled, responseMessage, name, mail, formContent, namePl, mailPl, formContentPl } = this.state
+    const { formDisabled, responseMessage, statusNoteKey, name, mail, formContent, namePl, mailPl, formContentPl } = this.state
 
-    const btnVisClass = formButtonDisabled ? styles.noShow : ""
+    const visibleForm = formDisabled ? "noShow" : ""
 
     return (
-      <motion.form className={styles.form} initial="exit" animate="enter" exit="exit" variants={staticVars.pageTransition}>
-        <p>{responseMessage}</p>
-        <div className={styles.fieldWrap}>
+      <form className="form">
+
+        <FormMessage note={responseMessage} noteKey={statusNoteKey} />
+
+        <div className={`fieldWrap ${visibleForm}`}>
           <fieldset>
             <input placeholder={namePl} type="text" tabIndex="1" value={name} name="fname" onChange={this.onNameChange} required autoFocus />
           </fieldset>
@@ -47,14 +81,14 @@ class ContactForm extends Component {
             <textarea placeholder={formContentPl} tabIndex="3" value={formContent} name="ftext" onChange={this.onFormContentChange} cols="30" rows="5" required></textarea>
           </fieldset>
           <fieldset>
-            <div className={`${styles.btn} ${btnVisClass}`} >
+            <div className="btn" >
               <button name="submit" type="submit" id="contact-submit" data-submit="...Sending"
                 onClick={this.submitContactForm}
-                disabled={formButtonDisabled} >Send</button>
+                disabled={formDisabled} >Send</button>
             </div>
           </fieldset>
         </div>
-      </motion.form>
+      </form>
     )
   }
 
@@ -81,34 +115,32 @@ class ContactForm extends Component {
       formContent
     }
 
-    console.log("isValidSync", schema.isValidSync(fields));
-
     if (schema.isValidSync(fields)) {
+      this.setState({
+        formDisabled: true,
+        statusNoteKey: "formsent",
+        responseMessage: "Thank you. We will get back to you shortly."
+      })
       //send data to nodemailer
       const res = await sendContactMail(fields)
 
-      if (res.status < 300) {
+      if (res.status >= 300) {
+        //console.log(res)
         this.setState({
-          formButtonDisabled: true,
-          responseMessage: "Thank you. We will get back to you shortly."
+          responseMessage: "Something went really wrong.",
+          statusNoteKey: "servererror",
         })
 
-      } else {
-        //console.log(res)
-        this.setState({ responseMessage: "Something went really wrong." })
       }
     } else {
       //show not valid fields information
 
-      this.setState({ responseMessage: "All fields are required and must be valid." })
+      this.setState({
+        responseMessage: "All fields are required and must be valid.",
+        statusNoteKey: "formnotvalid"
+      })
 
-      /*
-      schema.validate(fields, schemaOptions).catch(function (err) {
-        console.log("ERRORS", err.errors);
-        console.log("VALUE", err.value);
-        console.log("PATH", err.path);
-      });
-      */
+
     }
   }
 }

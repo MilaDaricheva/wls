@@ -49,7 +49,7 @@ function Layout({ router, children }) {
         </motion.div>
 
         <footer className="footer">
-          WideLine Studio &copy;2020
+          WideLine Studio &copy;2021
         </footer>
       </div>
       <MainSvg />

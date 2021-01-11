@@ -7,6 +7,8 @@
   --color-dark-3: #bbbbbe;
   --color-dark-4: #00B7AA;
   --color-dark-5: #30928A;
+  --color-red: #900C3F;
+  --color-yellow: #DFA01E;
   /* 1D5575 4496A1 141217 */
   /* A9A659 B74645 */
 
@@ -167,11 +169,12 @@ p {
   transform-origin: center right;
 }
 .logo a:hover #circleLogo {
-  transform: rotate(360deg);
+  transform: scale(1.2) rotate(360deg);
 }
 .logo a #circleLogo {
   position: relative;
-  margin-left:0.15em;
+  margin-left:0.28em;
+  transform: scale(1.2);
 }
 /* NAVIGATION */
 .headerWrapper {

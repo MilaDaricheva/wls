@@ -1,9 +1,24 @@
 .form {
   display: block;
 }
-
+.form p.formnotvalid {
+  color: var(--color-yellow)
+}
+.form p.servererror {
+  color: var(--color-red)
+}
+.form p.formsent {
+  color: var(--color-dark-5)
+}
 .fieldWrap {
-  width: 50%
+  width: 50%;
+  transition: 1s;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, transform 0s ease-in-out 0.5s;
+}
+.noShow {
+  transform: translateX(-150%);
+  opacity: 0;
 }
 
 .form fieldset {
@@ -48,7 +63,6 @@
     position: relative;
     z-index: 5;
     transition: 0.5s;
-    opacity: 1;
 }
 .btn button {
   background-color: transparent;
@@ -72,9 +86,7 @@
     -ms-user-select: none;
     user-select: none;
 }
-.noShow {
-  opacity: 0 !important;
-}
+
 
 .btn::before,
 .btn::after {
