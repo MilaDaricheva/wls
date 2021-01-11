@@ -20,13 +20,11 @@
   transform: translateX(-150%);
   opacity: 0;
 }
-
 .form fieldset {
   border: none;
   margin: 0 0 0.5em;
   padding: 0;
 }
-
 .form input,
 .form textarea {
   width: 100%;
@@ -38,6 +36,8 @@
   border: 1px solid var(--color-light-2);
   background-color: var(--color-light-1);
   transition: all 0.5s ease-in-out;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 .form textarea {
   resize: none;
@@ -48,8 +48,6 @@
   border: 1px solid var(--color-dark-3);
   outline: none;
 }
-
-
 .btn {
     width: 5em;
     height: 2em;
@@ -86,8 +84,6 @@
     -ms-user-select: none;
     user-select: none;
 }
-
-
 .btn::before,
 .btn::after {
   position: absolute;
@@ -96,31 +92,25 @@
   transition: 0.5s;
   content: '';
 }
-
 .btn::before {
   height: 2em;
   width: 4em;
 }
-
 .btn::after {
   width: 5em;
   height: 1.5em;
 }
-
 .btn:hover::before {
   width: 0px;
   background-color: var(--color-light-1);
 }
-
 .btn:hover::after {
   height: 0px;
   background-color: var(--color-light-1);
 }
-
 .btn:hover {
   background-color: var(--color-light-1);
 }
-
 /* Change Autocomplete styles*/
 .form input:-webkit-autofill,
 .form input:-webkit-autofill:hover,
