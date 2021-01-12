@@ -233,6 +233,101 @@ nav a:focus {
   }
 }
 
+/* Button and CTA Button */
+
+.btn,
+.ctaButton {
+  width: 5em;
+  height: 3em;
+  border: 1px solid var(--color-dark-3);
+  background-color: var(--color-light-2);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  transition: 0.5s;
+}
+.ctaButton {
+  width: 8em;
+  margin-top: 1em;
+}
+.btn button,
+.ctaButton a {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 2em;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  color: var(--color-dark-1);
+  outline: none;
+  position: relative;
+  z-index: 6;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.ctaButton a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 2em;
+  padding: 0.4em 0 0.6em 0;
+}
+.btn::before,
+.btn::after,
+.ctaButton::before,
+.ctaButton::after {
+  position: absolute;
+  background-color: var(--color-light-2);
+  z-index: 4;
+  transition: 0.5s;
+  content: '';
+}
+
+.btn::before,
+.ctaButton::before {
+  height: 2em;
+  width: 4em;
+}
+
+.btn::after,
+.ctaButton::after {
+  width: 5em;
+  height: 1.5em;
+}
+
+.ctaButton::after {
+  width: 8em;
+}
+
+.btn:hover::before,
+.ctaButton:hover::before {
+  width: 0px;
+  background-color: var(--color-light-1);
+}
+
+.btn:hover::after,
+.ctaButton:hover::after {
+  height: 0px;
+  background-color: var(--color-light-1);
+}
+
+.btn:hover,
+.ctaButton:hover {
+  background-color: var(--color-light-1);
+}
+
 /* BACKGROUND CIRCLES */
 #circle {
   z-index: 1;

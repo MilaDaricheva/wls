@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import staticVars from '../utils/staticvars'
 import { motion } from "framer-motion"
+import CTAButton from '../components/ctabutton'
 
 const siteTitle = 'Our Favorites'
 
@@ -23,6 +24,7 @@ export default function Favorites() {
           <p>Cloud computing provides scalability.</p>
 
           <p>Headless CMS makes content accessible via an API for display on any device.</p>
+          <CTAButton label={"Let's get to work"} />
 
         </main>
       </motion.div>
