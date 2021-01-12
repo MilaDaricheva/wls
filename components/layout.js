@@ -3,8 +3,7 @@ import Logo from '../components/logosvg'
 import Nav from '../components/nav'
 import MainSvg from '../components/mainsvg'
 import { withRouter } from 'next/router'
-import coreUtils from '../utils/coreutils'
-import { motion } from "framer-motion"
+import { useState, useEffect } from 'react';
 
 export const siteTitle = 'WideLine Studio'
 
@@ -22,10 +21,36 @@ function transformCircle(event) {
 }
 
 function Layout({ router, children }) {
+  const [dimensions, setDimensions] = useState({
+    height: "100vh",
+    width: "100%"
+  });
 
-  const pgId = coreUtils.getPageId(router.pathname);
+  useEffect(() => {
 
-  //console.log("PAGEID", pgId);
+    //Set inner height first time too, then on resize
+    if (dimensions.height === "100vh") {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      })
+      //console.log('First resized to: ', window.innerWidth, 'x', window.innerHeight)
+    }
+
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      })
+      //console.log('UPT: ', window.innerWidth, 'x', window.innerHeight)
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return _ => {
+      window.removeEventListener('resize', handleResize)
+    }
+  })
 
   return (
     <div className="container">
@@ -38,7 +63,7 @@ function Layout({ router, children }) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <link rel="icon" href="/favicon.png" type="image/png" />
       </Head>
-      <div className="wrapper">
+      <div className="wrapper" style={{ minHeight: dimensions.height, width: dimensions.width }}>
         <div className="headerWrapper">
           <Logo />
           <Nav />

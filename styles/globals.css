@@ -61,15 +61,18 @@ body {
 }
 
 /* Set core body defaults */
+
+html {
+  height: -webkit-fill-available;
+}
 body {
-  perspective: 1000px;  
+  perspective: 1000px;
   background-color: var(--color-light-1);
   color: var(--color-dark-1);
 }
-
 body, html {
   width: 100%;
-  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -129,7 +132,6 @@ p {
 
 .container {
   width: 100%;
-  min-height: 100vh;
   position: relative;
   overflow: hidden;
 }
