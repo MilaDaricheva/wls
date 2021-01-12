@@ -20,7 +20,7 @@ function transformCircle(event) {
 
 }
 
-function Layout({ router, children }) {
+function Layout({ children }) {
   const [dimensions, setDimensions] = useState({
     height: "100vh",
     width: "100%"
@@ -28,32 +28,33 @@ function Layout({ router, children }) {
 
   useEffect(() => {
 
-    //Set inner height first time too, then on resize
-    if (dimensions.height === "100vh") {
-      setDimensions({
-        height: window.innerHeight,
-        width: window.innerWidth
-      })
-      //console.log('First resized to: ', window.innerWidth, 'x', window.innerHeight)
-    }
-
     function handleResize() {
       setDimensions({
         height: window.innerHeight,
         width: window.innerWidth
       })
-      //console.log('UPT: ', window.innerWidth, 'x', window.innerHeight)
+      document.documentElement.style.setProperty('--window-height', window.innerHeight + "px");
+      document.documentElement.style.setProperty('--window-width', window.innerWidth + "px");
+
+    }
+
+    //Set inner height first time too, then on resize
+    if (dimensions.height === "100vh") {
+      handleResize()
     }
 
     window.addEventListener('resize', handleResize)
 
+    window.addEventListener('orientationchange', handleResize);
+
     return _ => {
-      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('resize', handleResize),
+        window.removeEventListener('orientationchange', handleResize)
     }
   })
 
   return (
-    <div className="container">
+    <div className="container" style={{ minHeight: dimensions.height, width: dimensions.width }}>
       <Head>
         <title>{siteTitle}</title>
         <meta name="description" content="Coding modern web designs using modern web technologies."></meta>

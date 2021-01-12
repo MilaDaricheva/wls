@@ -122,10 +122,12 @@
 .form select:-webkit-autofill:hover,
 .form select:-webkit-autofill:focus {
   border: 1px solid var(--color-light-2);
+  background-color: var(--color-light-1) !important;
   -webkit-text-fill-color: var(--color-dark-1);
   box-shadow: 0 0 0px 1000px var(--color-light-1) inset;
   -webkit-box-shadow: 0 0 0px 1000px var(--color-light-1) inset;
   transition: background-color 5000s ease-in-out 0s;
+  -webkit-transition-delay: 99999s;
 }
 
 .form input::placeholder,

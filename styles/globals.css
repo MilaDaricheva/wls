@@ -71,6 +71,10 @@ body {
   color: var(--color-dark-1);
 }
 body, html {
+  /*
+  width: var(--window-width);
+  min-height: var(--window-height);
+  */
   width: 100%;
   overflow-x: hidden;
 }
@@ -132,6 +136,7 @@ p {
 
 .container {
   width: 100%;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -322,5 +327,7 @@ nav a:focus {
     opacity: 0.3;
   }
 }
+
+
 
 
