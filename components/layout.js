@@ -4,6 +4,7 @@ import Nav from '../components/nav'
 import MainSvg from '../components/mainsvg'
 import { withRouter } from 'next/router'
 import { useState, useEffect } from 'react';
+import CircleLogoS from '../public/svg/CircleLogoS.svg';
 
 export const siteTitle = 'WideLine Studio'
 
@@ -74,7 +75,9 @@ function Layout({ children }) {
         </div>
 
         <footer className="footer">
-          WideLine Studio &copy;2021
+          <span>WideLine Studio</span>
+          <CircleLogoS />
+          <span>2021</span>
         </footer>
       </div>
       <MainSvg />
