@@ -24,7 +24,10 @@ export default function Home() {
           <p>Tired of old and hard to extend platforms?</p>
           <p>WideLine Studio is using only best practices to deliver high quality solutions.</p>
           <p>Coding modern web designs using modern web technologies.</p>
-          <CTAButton label={"Let's get to work"} />
+          <div className="pushEffWrapper">
+            <div className="pushEffect"><CTAButton label={"Let's get to work"} /></div>
+          </div>
+
         </main>
       </motion.div>
     </div>

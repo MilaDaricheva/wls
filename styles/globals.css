@@ -61,7 +61,10 @@ body {
 }
 
 /* Set core body defaults */
-
+html * {
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
 html {
   height: -webkit-fill-available;
 }
@@ -179,18 +182,23 @@ p {
   padding: 0.3em 1.1em 0.3em 1em;
   position: relative;
 }
-.logo a svg {
-  transition: all .7s ease-in-out;
-  transform-origin: center right;
-}
-.logo a:hover #circleLogo {
-  transform: scale(1.2) rotate(360deg);
+.logo span {
+
+  display: inline-block;
+  transform: scale(1.3) translateX(0.2em);
+
 }
 .logo a #circleLogo {
   position: relative;
-  margin-left:0.28em;
-  transform: scale(1.2);
+  transition: all .7s ease-in-out;
+  transform-origin: center right;
+  animation: rotation .7s ease-in-out;
+  animation-delay: 0.5s;
 }
+.logo a:hover #circleLogo {
+  transform: rotate(360deg);
+}
+
 /* NAVIGATION */
 .headerWrapper {
   border-bottom: 1px solid var(--color-light-2);
@@ -252,7 +260,6 @@ nav a:focus {
 }
 .ctaButton {
   width: 8em;
-  margin-top: 1em;
 }
 .btn button,
 .ctaButton a {
@@ -326,6 +333,41 @@ nav a:focus {
 .btn:hover,
 .ctaButton:hover {
   background-color: var(--color-light-1);
+}
+.pushEffWrapper {
+  position: relative;
+  margin-top: 2em;
+  width: 8em;
+  height: 3em;
+}
+.pushEffect {
+  animation: push 1s ease-out 3s forwards;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+@keyframes push {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg) scale(2) skew(0deg) translate(4em, 2em);
+  }
+
+  70% {
+    opacity: 0.7;
+    transform: scale(0.8) translate(-1em, 0px);
+  }
+
+  85% {
+    opacity: 0.8;
+    transform: scale(1.1) translate(0.5em, 0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(0px, 0px);
+  }
+
 }
 
 /* BACKGROUND CIRCLES */
@@ -423,6 +465,27 @@ nav a:focus {
   }
 }
 
+#circleLogoS {
+  animation: bounce 0.7s ease-out 0.5s forwards;
+  animation-iteration-count: 5;
+}
 
+@keyframes bounce {
+  0% {
+
+    transform: scale(1) translate(0px, 0px);
+  }
+
+  70% {
+
+    transform: scale(1.3) translate(0px, -1em);
+  }
+
+  100% {
+
+    transform: scale(1) translate(0px, 0px);
+  }
+
+}
 
 

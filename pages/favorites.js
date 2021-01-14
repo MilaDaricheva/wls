@@ -24,7 +24,10 @@ export default function Favorites() {
           <p>Cloud computing provides scalability.</p>
 
           <p>Headless CMS makes content accessible via an API for display on any device.</p>
-          <CTAButton label={"Let's get to work"} />
+          <div className="pushEffWrapper">
+            <div className="pushEffect"><CTAButton label={"Let's get to work"} /></div>
+          </div>
+
 
         </main>
       </motion.div>

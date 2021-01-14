@@ -8,7 +8,7 @@ export default function Logo() {
       <Link href="/">
         <a aria-label="WideLine Studio Logo" >
           <WideLineStudi />
-          <CircleLogo />
+          <span><CircleLogo /></span>
         </a>
       </Link>
 
