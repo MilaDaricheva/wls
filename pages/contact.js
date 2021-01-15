@@ -1,7 +1,9 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import staticVars from '../utils/staticvars'
 import { motion } from "framer-motion"
-import ContactForm from "../components/contactform"
+
+const ContactForm = dynamic(() => import('../components/contactform'))
 
 const siteTitle = "Let's get to work"
 

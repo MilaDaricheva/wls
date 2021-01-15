@@ -1,9 +1,11 @@
 import { Component } from "react"
 import { useState, useEffect } from 'react';
-import { sendContactMail } from "../components/mail-api"
+
 import * as yup from 'yup';
 import { motion } from "framer-motion"
 import { useAnimation } from "framer-motion";
+
+import { sendContactMail } from "../components/mail-api"
 
 
 let schema = yup.object().shape({
@@ -72,13 +74,13 @@ class ContactForm extends Component {
 
         <div className={`fieldWrap ${visibleForm}`}>
           <fieldset>
-            <input placeholder={namePl} type="text" tabIndex="1" value={name} name="fname" onChange={this.onNameChange} required autoFocus />
+            <input placeholder={namePl} type="text" aria-label="Your name" value={name} name="fname" onChange={this.onNameChange} required autoFocus />
           </fieldset>
           <fieldset>
-            <input placeholder={mailPl} type="email" tabIndex="2" value={mail} name="femail" onChange={this.onMailChange} required />
+            <input placeholder={mailPl} type="email" aria-label="Your email" value={mail} name="femail" onChange={this.onMailChange} required />
           </fieldset>
           <fieldset>
-            <textarea placeholder={formContentPl} tabIndex="3" value={formContent} name="ftext" onChange={this.onFormContentChange} cols="30" rows="5" required></textarea>
+            <textarea placeholder={formContentPl} value={formContent} aria-label="Your message" name="ftext" onChange={this.onFormContentChange} cols="30" rows="5" required></textarea>
           </fieldset>
           <fieldset>
             <div className="btn" >
