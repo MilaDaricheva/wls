@@ -1,4 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { readFileSync } from 'fs'
+import { join } from 'path'
 class InlineStylesHead extends Head {
   getCssLinks({ allFiles }) {
     return allFiles
@@ -8,7 +10,7 @@ class InlineStylesHead extends Head {
           key={file}
           nonce={this.props.nonce}
           dangerouslySetInnerHTML={{
-            __html: fs.readFileSync(path.join('.next', file), 'utf-8'),
+            __html: readFileSync(join('.next', file), 'utf-8'),
           }}
         />
       ));
