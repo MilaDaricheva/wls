@@ -1,18 +1,10 @@
 import { Component } from "react"
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
-import * as yup from 'yup';
 import { motion } from "framer-motion"
-import { useAnimation } from "framer-motion";
+import { useAnimation } from "framer-motion"
 
 import { sendContactMail } from "../components/mail-api"
-
-
-let schema = yup.object().shape({
-  name: yup.string("name").required("name"),
-  mail: yup.string("mail").required("mail").email("mail"),
-  formContent: yup.string("formContent").required("formContent")
-});
 
 const FormMessage = (props) => {
   const controls = useAnimation()
@@ -116,6 +108,14 @@ class ContactForm extends Component {
       mail,
       formContent
     }
+
+    const yup = (await import('yup'))
+
+    let schema = yup.object().shape({
+      name: yup.string("name").required("name"),
+      mail: yup.string("mail").required("mail").email("mail"),
+      formContent: yup.string("formContent").required("formContent")
+    });
 
     if (schema.isValidSync(fields)) {
       this.setState({
