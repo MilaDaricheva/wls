@@ -210,10 +210,11 @@ p {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
 .nav {
-  animation: appear 1s ease-out 0.5s forwards;
+  animation: appear 0.5s ease-out 0.1s forwards;
   animation-iteration-count: 1;
-  opacity:0;
+  opacity: 0;
 }
 
 nav ul {
@@ -477,8 +478,9 @@ nav a:focus {
   }
 }
 /* FOOTER */
+
 .footer span {
-  animation: appear 1s ease-out 3s forwards;
+  animation: appear 0.5s ease-out 3s forwards;
   animation-iteration-count: 1;
   opacity:0;
 }
@@ -491,15 +493,13 @@ nav a:focus {
 
 @keyframes appear {
   0% {
-    opacity: 0;
-  }
-
-  90% {
-    opacity: 0;
+    opacity: 0.1;
+    transform: scale(0.1)
   }
 
   100% {
     opacity: 1;
+    transform: scale(1)
   }
 
 }
