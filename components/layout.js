@@ -21,7 +21,11 @@ function transformCircle(event) {
 
 }
 
-function Layout({ children }) {
+function Layout({ children, router }) {
+
+  const routerPath = router.pathname;
+  //console.log("routerPath", routerPath);
+
   const [dimensions, setDimensions] = useState({
     height: "100vh",
     width: "100%"
@@ -64,6 +68,22 @@ function Layout({ children }) {
         <meta name="robots" content="index, follow" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <link rel="icon" href="/favicon.png" type="image/png" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C68WNE0L08"></script>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-C68WNE0L08');
+          
+          gtag('event', 'page_view', {
+            page_path: '${routerPath}'
+          });
+          `
+          }}
+        />
       </Head>
       <div className="wrapper" style={{ minHeight: dimensions.height, width: dimensions.width }}>
         <div className="headerWrapper">
