@@ -2,10 +2,25 @@ import Head from 'next/head'
 import staticVars from '../utils/staticvars'
 import { motion } from "framer-motion"
 import CTAButton from '../components/ctabutton'
+import { getPosts } from '../utils/posts';
 
 const siteTitle = 'Our Projects'
 
-export default function Projects() {
+export async function getStaticProps(context) {
+  const posts = await getPosts()
+
+  if (!posts) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: { posts }
+  }
+}
+
+export default function Projects(props) {
 
   return (
     <div className="mainWrap">
@@ -19,11 +34,12 @@ export default function Projects() {
             {siteTitle}
           </h1>
 
-          <p>REST APIs give us flexibility.</p>
-
-          <p>Cloud computing provides scalability.</p>
-
-          <p>Headless CMS makes content accessible via an API for display on any device.</p>
+          <ul>
+            {props.posts.map(post => (
+              <li key={post.id}>{post.title}</li>
+            ))}
+          </ul>
+          
           <div className="pushEffWrapper">
             <div className="pushEffect"><CTAButton label={"Let's get to work"} /></div>
           </div>
