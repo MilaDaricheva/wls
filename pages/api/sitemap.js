@@ -8,7 +8,7 @@ export default async (req, res) => {
     });
 
     // List of posts
-    const posts = ['/', 'favorites', 'contact'];
+    const posts = ['/', 'favorites', 'projects', 'contact'];
 
     // Create each URL row
     posts.forEach(post => {

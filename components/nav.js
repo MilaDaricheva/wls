@@ -17,6 +17,11 @@ export default function Nav() {
           </Link>
         </li>
         <li>
+          <Link activeClassName="active" href="/projects">
+            <a data-item='Projects' >Projects</a>
+          </Link>
+        </li>
+        <li>
           <Link activeClassName="active" href="/contact">
             <a data-item='Contact' >Contact</a>
           </Link>
