@@ -3,6 +3,7 @@ import staticVars from '../utils/staticvars'
 import { motion } from "framer-motion"
 import CTAButton from '../components/ctabutton'
 import { getPosts } from '../utils/posts';
+import Link from 'next/link';
 
 const siteTitle = 'Our Projects'
 
@@ -36,10 +37,14 @@ export default function Projects(props) {
 
           <ul>
             {props.posts.map(post => (
-              <li key={post.id}>{post.title}</li>
+              <li key={post.id}>
+                <Link href={`/project/${post.slug}`}>
+                  <a>{post.title}</a>
+                </Link>
+              </li>
             ))}
           </ul>
-          
+
           <div className="pushEffWrapper">
             <div className="pushEffect"><CTAButton label={"Let's get to work"} /></div>
           </div>
