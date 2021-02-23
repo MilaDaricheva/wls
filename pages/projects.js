@@ -28,6 +28,7 @@ export default function Projects(props) {
 
       <Head>
         <title>{siteTitle}</title>
+        <meta name="description" content="WideLine Studio Blog for Projects review"/>
       </Head>
       <motion.div id="projects" initial="exit" animate="enter" exit="exit" variants={staticVars.pageTransition}>
         <main>
@@ -48,7 +49,6 @@ export default function Projects(props) {
           <div className="pushEffWrapper">
             <div className="pushEffect"><CTAButton label={"Let's get to work"} /></div>
           </div>
-
 
         </main>
       </motion.div>

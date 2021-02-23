@@ -12,6 +12,7 @@ export default function Favorites() {
 
       <Head>
         <title>{siteTitle}</title>
+        <meta name="description" content="WideLine Studio Favorite Tools" />
       </Head>
       <motion.div id="favorites" initial="exit" animate="enter" exit="exit" variants={staticVars.pageTransition}>
         <main>

@@ -14,6 +14,7 @@ export default function Contact() {
 
       <Head>
         <title>{siteTitle}</title>
+        <meta name="description" content="WideLine Studio Contact Page. Let's get to work." />
       </Head>
 
       <motion.div id="contact" initial="exit" animate="enter" exit="exit" variants={staticVars.pageTransition}>
