@@ -487,11 +487,11 @@ nav a:focus {
   }
 
   70% {
-    opacity: 0.2;
+    opacity: 0.1;
   }
 
   100% {
-    opacity: 0.2;
+    opacity: 0.1;
   }
 }
 
@@ -576,6 +576,7 @@ span.dots {
   font-size: 0.9em;
   line-height: 1.6em;
   padding-bottom: 0.7em;
+  letter-spacing: 1px;
 }
 @media (max-width: 1360px) {
   main.projects h4 {
