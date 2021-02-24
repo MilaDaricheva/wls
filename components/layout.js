@@ -8,16 +8,23 @@ import CircleLogoS from '../public/svg/CircleLogoS.svg';
 
 export const siteTitle = 'WideLine Studio'
 
+let circleEl;
+let mouseX = 0;
+let mouseY = 0;
+
 function transformCircle(event) {
-  // 1. Find mouse position
-  let xAxis = Math.round((window.innerWidth * 0.5 - event.pageX) / (window.innerWidth / 30));
-  let yAxis = Math.round((window.innerHeight * 0.5 - event.pageY) / (window.innerHeight / 30));
+  
+  if (Math.abs(event.pageX - mouseX) > 30 || Math.abs(event.pageY - mouseY) > 30) {
+    //console.log(Math.abs(event.pageX - mouseX), Math.abs(event.pageY - mouseY), mouseX, mouseY);
+    mouseX = event.pageX;
+    mouseY = event.pageY;
+    // 1. Find mouse position and calculate transform position
+    let xAxis = Math.round((window.innerWidth * 0.5 - event.pageX) / (window.innerWidth / 30));
+    let yAxis = Math.round((window.innerHeight * 0.5 - event.pageY) / (window.innerHeight / 30));
 
-  //console.log(xAxis, yAxis, zAxis3);
-  // 2. Create animations
-  let circleEl = document.getElementById("circle");
-
-  circleEl.style.transform = `rotateY(${-xAxis}deg) rotateX(${-yAxis}deg)`;
+    // 2. Create animations
+    circleEl.style.transform = `rotateY(${-xAxis}deg) rotateX(${-yAxis}deg)`;
+  }
 
 }
 
@@ -32,6 +39,8 @@ function Layout({ children, router }) {
   });
 
   useEffect(() => {
+
+    circleEl = document.getElementById("circle"); //define circle element
 
     function handleResize() {
       setDimensions({

@@ -409,7 +409,7 @@ nav a:focus {
   width: var(--screen-full-width);
   height: var(--screen-full-width); /* Heights of the svgs are the same */
   opacity: 0.3;
-  transition: transform 0.5s, opacity 15s;
+  transition: transform 1s, opacity 15s;
   animation: opacityChange 15s infinite ease-out alternate;
 }
 .circleWrap {
