@@ -271,37 +271,33 @@ nav a:focus {
 
 .btn,
 .ctaButton {
-  width: 5em;
-  height: 3em;
-  border: 1px solid var(--color-dark-3);
-  background-color: var(--color-light-2);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
   position: relative;
   z-index: 5;
-  transition: 0.5s;
+  margin: 1em 0 0 0;
 }
-.ctaButton {
-  width: 8em;
-}
+
 .btn button,
 .ctaButton a {
-  background-color: transparent;
+  background-color: var(--color-yellow);
   border: none;
+  border-radius: 4px;
+  
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1.5em;
   line-height: 2em;
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
-  color: var(--color-dark-1);
+  color: var(--color-light-0);
   outline: none;
   position: relative;
   z-index: 6;
+  transition: 0.5s;
 
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -311,94 +307,68 @@ nav a:focus {
   user-select: none;
 }
 .ctaButton a {
+  width: 50%;
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  line-height: 2em;
-  padding: 0.4em 0 0.6em 0;
 }
-.btn::before,
-.btn::after,
-.ctaButton::before,
-.ctaButton::after {
+.btn button:focus,
+.ctaButton a:focus {
+  outline: none;
+}
+.btn button:before,
+.ctaButton a:before {
+  content: "";
+  display: block;
   position: absolute;
-  background-color: var(--color-light-2);
-  z-index: 4;
-  transition: 0.5s;
-  content: '';
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  filter: blur(30px);
+  transform: translateX(-100px) skewX(-15deg);
 }
 
-.btn::before,
-.ctaButton::before {
-  height: 2em;
-  width: 4em;
-}
-
-.btn::after,
-.ctaButton::after {
-  width: 5em;
-  height: 1.5em;
-}
-
-.ctaButton::after {
-  width: 8em;
-}
-
-.btn:hover::before,
-.ctaButton:hover::before {
-  width: 0px;
-  background-color: var(--color-light-1);
-}
-
-.btn:hover::after,
-.ctaButton:hover::after {
-  height: 0px;
-  background-color: var(--color-light-1);
-}
-
-.btn:hover,
-.ctaButton:hover {
-  background-color: var(--color-light-1);
-}
-.pushEffWrapper {
-  position: relative;
-  margin-top: 2em;
-  width: 8em;
-  height: 3em;
-}
-.pushEffect {
-  animation: push 1s ease-out 2s forwards;
+.btn button:after,
+.ctaButton a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
   opacity: 0;
-  overflow: hidden;
-  position: absolute;
+  filter: blur(10px);
+  transform: translateX(-100px) skewX(-15deg);
 }
 
-@keyframes push {
-  0% {
-    opacity: 0;
-    transform: rotate(0deg) scale(2) skew(0deg) translate(6em, 2em);
-  }
-
-  70% {
-    opacity: 0.7;
-    transform: scale(0.8) translate(-1em, 0px);
-  }
-
-  85% {
-    opacity: 0.8;
-    transform: scale(1.1) translate(0.5em, 0px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1) translate(0px, 0px);
-  }
-
+.btn button:hover,
+.ctaButton a:hover {
+  background: var(--color-dark-5);
+  cursor: pointer;
 }
-@media (max-width: 1024px) {
-  .btn button,
+
+.btn button:hover:before,
+.ctaButton a:hover:before {
+  transform: translateX(calc(100vw)) skewX(-15deg);
+  opacity: 0.6;
+  transition: 0.7s;
+}
+
+.btn button:hover:after,
+.ctaButton a:hover:after {
+  transform: translateX(calc(100vw)) skewX(-15deg);
+  opacity: 1;
+  transition: 0.7s;
+}
+
+@media (max-width: 540px) {
   .ctaButton a {
-    font-size: 1.4em;
+    width:100%;
   }
 }
 

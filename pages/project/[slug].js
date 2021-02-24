@@ -52,9 +52,7 @@ const PostPage = (props) => {
 
             <div className="post" dangerouslySetInnerHTML={{ __html: props.post.html }} />
 
-            <div className="pushEffWrapper">
-              <div className="pushEffect"><CTAButton label={"Let's get to work"} /></div>
-            </div>
+            <CTAButton label={"Let's get to work"} />
           </div>
         </main>
       </motion.div>

@@ -2,7 +2,7 @@
   display: block;
 }
 .form p.formnotvalid {
-  color: var(--color-yellow)
+  color: var(--color-red)
 }
 .form p.servererror {
   color: var(--color-red)
