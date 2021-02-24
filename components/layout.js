@@ -21,7 +21,7 @@ function transformCircle(event) {
     // 1. Find mouse position and calculate transform position
     let xAxis = Math.round((window.innerWidth * 0.5 - event.pageX) / (window.innerWidth / 30));
     let yAxis = Math.round((window.innerHeight * 0.5 - event.pageY) / (window.innerHeight / 30));
-
+    //console.log(xAxis, yAxis);
     // 2. Create animations
     circleEl.style.transform = `rotateY(${-xAxis}deg) rotateX(${-yAxis}deg)`;
   }
@@ -68,7 +68,7 @@ function Layout({ children, router }) {
   })
 
   return (
-    <div className="container" style={{ minHeight: dimensions.height, width: dimensions.width }}>
+    <div className="container" >
       <Head>
         <title>{siteTitle}</title>
         <meta name="description" content="Coding modern web designs using modern web technologies."></meta>
@@ -94,7 +94,7 @@ function Layout({ children, router }) {
           }}
         />
       </Head>
-      <div className="wrapper" style={{ minHeight: dimensions.height, width: dimensions.width }}>
+      <div className="wrapper" style={{ height: dimensions.height, width: dimensions.width }}>
         <div className="headerWrapper">
           <Logo />
           <Nav />
