@@ -43,11 +43,12 @@ const PostPage = (props) => {
 
       <Head>
         <title>{props.post.title}</title>
+        <meta name="description" content={`${props.post.excerpt}`} />
       </Head>
       <motion.div id={`project-${props.post.slug}`} initial="exit" animate="enter" exit="exit" variants={staticVars.pageTransition}>
         <main>
           <div className="project" >
-            <h1>{props.post.title}</h1>
+            <h1>{props.post.title}</h1>     
 
             <div className="post" dangerouslySetInnerHTML={{ __html: props.post.html }} />
 
