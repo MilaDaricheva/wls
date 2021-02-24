@@ -33,7 +33,7 @@
   font-size: 0.8em;
   line-height: 0.8em;
   color: var(--color-dark-1) !important;
-  border: 1px solid var(--color-light-2);
+  border: 1px solid var(--color-dark-3);
   background-color: var(--color-light-1);
   transition: all 0.5s ease-in-out;
   -webkit-appearance: none;
@@ -44,8 +44,10 @@
   overflow: auto;
 }
 .form input:focus,
-.form textarea:focus {
-  border: 1px solid var(--color-dark-3);
+.form textarea:focus,
+.form input:valid,
+.form textarea:valid {
+  background-color: #fff;
   outline: none;
 }
 
@@ -59,11 +61,11 @@
 .form select:-webkit-autofill,
 .form select:-webkit-autofill:hover,
 .form select:-webkit-autofill:focus {
-  border: 1px solid var(--color-light-2);
-  background-color: var(--color-light-1) !important;
+  border: 1px solid var(--color-dark-3);
+  background-color: #fff !important;
   -webkit-text-fill-color: var(--color-dark-1);
-  box-shadow: 0 0 0px 1000px var(--color-light-1) inset;
-  -webkit-box-shadow: 0 0 0px 1000px var(--color-light-1) inset;
+  box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
   transition: background-color 9999s ease-in-out 9999s;
 }
 
@@ -82,6 +84,12 @@
 @media (max-width: 1024px) {
   .fieldWrap {
     width: 100%
+  }
+  .form input,
+  .form textarea {
+      font-size: 1.3em;
+      line-height: 1.3em;
+      
   }
 }
 

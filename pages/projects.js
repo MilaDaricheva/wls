@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import staticVars from '../utils/staticvars'
 import { motion } from "framer-motion"
-import CTAButton from '../components/ctabutton'
 import { getPosts } from '../utils/posts';
 import Link from 'next/link';
 
@@ -31,7 +30,7 @@ export default function Projects(props) {
         <meta name="description" content="WideLine Studio Blog for Projects review"/>
       </Head>
       <motion.div id="projects" initial="exit" animate="enter" exit="exit" variants={staticVars.pageTransition}>
-        <main>
+        <main className="projects">
           <h1>
             {siteTitle}
           </h1>
@@ -39,16 +38,16 @@ export default function Projects(props) {
           <ul>
             {props.posts.map(post => (
               <li key={post.id}>
-                <Link href={`/project/${post.slug}`}>
-                  <a>{post.title}</a>
+                <Link href={`/project/${post.slug}`}> 
+                  <a>
+                    <h4>{post.title} &#10547;</h4>
+                    <span>{post.excerpt}</span>
+                    <span className="dots">&#9900;&#9900;&#9900;</span>
+                  </a>
                 </Link>
               </li>
             ))}
           </ul>
-
-          <div className="pushEffWrapper">
-            <div className="pushEffect"><CTAButton label={"Let's get to work"} /></div>
-          </div>
 
         </main>
       </motion.div>

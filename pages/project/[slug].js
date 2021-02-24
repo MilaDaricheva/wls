@@ -46,15 +46,15 @@ const PostPage = (props) => {
       </Head>
       <motion.div id={`project-${props.post.slug}`} initial="exit" animate="enter" exit="exit" variants={staticVars.pageTransition}>
         <main>
-          <h1>{props.post.title}</h1>
+          <div className="project" >
+            <h1>{props.post.title}</h1>
 
-          <div dangerouslySetInnerHTML={{ __html: props.post.html }} />
+            <div className="post" dangerouslySetInnerHTML={{ __html: props.post.html }} />
 
-          <div className="pushEffWrapper">
-            <div className="pushEffect"><CTAButton label={"Let's get to work"} /></div>
+            <div className="pushEffWrapper">
+              <div className="pushEffect"><CTAButton label={"Let's get to work"} /></div>
+            </div>
           </div>
-
-
         </main>
       </motion.div>
 
