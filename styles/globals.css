@@ -345,26 +345,47 @@ nav a:focus {
   filter: blur(10px);
   transform: translateX(-100px) skewX(-15deg);
 }
+    .btn button.active,
+    .ctaButton a.active {
+      background: var(--color-dark-5);
+      cursor: pointer;
+    }
 
-.btn button:hover,
-.ctaButton a:hover {
-  background: var(--color-dark-5);
-  cursor: pointer;
+    .btn button.active:before,
+    .ctaButton a.active:before {
+      transform: translateX(calc(100vw)) skewX(-15deg);
+      opacity: 0.6;
+      transition: 0.7s;
+    }
+
+    .btn button.active:after,
+    .ctaButton a.active:after {
+      transform: translateX(calc(100vw)) skewX(-15deg);
+      opacity: 1;
+      transition: 0.7s;
+    }
+@media (hover: hover) {
+  .btn button:hover,
+  .ctaButton a:hover {
+    background: var(--color-dark-5);
+    cursor: pointer;
+  }
+
+  .btn button:hover:before,
+  .ctaButton a:hover:before {
+    transform: translateX(calc(100vw)) skewX(-15deg);
+    opacity: 0.6;
+    transition: 0.7s;
+  }
+
+  .btn button:hover:after,
+  .ctaButton a:hover:after {
+    transform: translateX(calc(100vw)) skewX(-15deg);
+    opacity: 1;
+    transition: 0.7s;
+  }
 }
 
-.btn button:hover:before,
-.ctaButton a:hover:before {
-  transform: translateX(calc(100vw)) skewX(-15deg);
-  opacity: 0.6;
-  transition: 0.7s;
-}
-
-.btn button:hover:after,
-.ctaButton a:hover:after {
-  transform: translateX(calc(100vw)) skewX(-15deg);
-  opacity: 1;
-  transition: 0.7s;
-}
 
 @media (max-width: 540px) {
   .ctaButton a {

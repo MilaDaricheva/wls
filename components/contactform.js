@@ -76,14 +76,36 @@ class ContactForm extends Component {
           </fieldset>
           <fieldset>
             <div className="btn" >
-              <button name="submit" type="submit" id="contact-submit" data-submit="...Sending"
+              <motion.button
+                name="submit"
+                type="submit"
+                id="contact-submit"
+                data-submit="...Sending"
+                whileTap={{ scaleY: 1.2 }}
+                onTapStart={this.onTapStart}
+                onTapCancel={this.onTapCancel}
+                onTap={this.onTap}
                 onClick={this.submitContactForm}
-                disabled={formDisabled} >Send</button>
+                disabled={formDisabled} >Send</motion.button>
             </div>
           </fieldset>
         </div>
       </form>
     )
+  }
+
+  onTap(event, info) {
+    //console.log("end", info.point.x, info.point.y)
+    event.path[0].classList.remove("active");
+  }
+  onTapCancel(event, info) {
+    //console.log("cancel", info.point.x, event.path[0])
+    event.path[0].classList.remove("active");
+  }
+  onTapStart(event, info) {
+    //console.log("start", info.point.x, event.path[0]);
+    event.path[0].classList.add("active");
+    //event.path[1].style.transform = "scale(2)";
   }
 
   onNameChange = (event) => {
