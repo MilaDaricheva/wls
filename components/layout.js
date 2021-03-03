@@ -1,31 +1,32 @@
 import Head from 'next/head'
 import Logo from '../components/logosvg'
-import Nav from '../components/nav'
+import Navigation from "./navigation"
 import MainSvg from '../components/mainsvg'
 import { withRouter } from 'next/router'
-import { useState, useEffect } from 'react';
-import CircleLogoS from '../public/svg/CircleLogoS.svg';
+import { useState, useEffect } from 'react'
+import CircleLogoS from '../public/svg/CircleLogoS.svg'
 
-export const siteTitle = 'WideLine Studio'
+export const siteTitle = 'WideLine Studio';
 
 let circleEl;
+let headerEl;
 let mouseX = 0;
 let mouseY = 0;
 
 function transformCircle(event) {
-  
-  if (Math.abs(event.pageX - mouseX) > 30 || Math.abs(event.pageY - mouseY) > 30) {
-    //console.log(Math.abs(event.pageX - mouseX), Math.abs(event.pageY - mouseY), mouseX, mouseY);
-    mouseX = event.pageX;
-    mouseY = event.pageY;
-    // 1. Find mouse position and calculate transform position
-    let xAxis = Math.round((window.innerWidth * 0.5 - event.pageX) / (window.innerWidth / 30));
-    let yAxis = Math.round((window.innerHeight * 0.5 - event.pageY) / (window.innerHeight / 30));
-    //console.log(xAxis, yAxis);
-    // 2. Create animations
-    circleEl.style.transform = `rotateY(${-xAxis}deg) rotateX(${-yAxis}deg)`;
+  if (circleEl) {
+    if (Math.abs(event.pageX - mouseX) > 30 || Math.abs(event.pageY - mouseY) > 30) {
+      //console.log(Math.abs(event.pageX - mouseX), Math.abs(event.pageY - mouseY), mouseX, mouseY);
+      mouseX = event.pageX;
+      mouseY = event.pageY;
+      // 1. Find mouse position and calculate transform position
+      let xAxis = Math.round((window.innerWidth * 0.5 - event.pageX) / (window.innerWidth / 30));
+      let yAxis = Math.round((window.innerHeight * 0.5 - event.pageY) / (window.innerHeight / 30));
+      //console.log(xAxis, yAxis);
+      // 2. Create animations
+      circleEl.style.transform = `rotateY(${-xAxis}deg) rotateX(${-yAxis}deg)`;
+    }
   }
-
 }
 
 function Layout({ children, router }) {
@@ -35,17 +36,20 @@ function Layout({ children, router }) {
 
   const [dimensions, setDimensions] = useState({
     height: "100vh",
-    width: "100%"
+    width: "100%",
+    headerBar: 0
   });
 
   useEffect(() => {
 
     circleEl = document.getElementById("circle"); //define circle element
+    headerEl = document.getElementById("headerBar"); //define header element
 
     function handleResize() {
       setDimensions({
         height: window.innerHeight,
-        width: window.innerWidth
+        width: window.innerWidth,
+        headerBar: headerEl.clientHeight
       })
       document.documentElement.style.setProperty('--window-height', window.innerHeight + "px");
       document.documentElement.style.setProperty('--window-width', window.innerWidth + "px");
@@ -56,8 +60,8 @@ function Layout({ children, router }) {
     if (dimensions.height === "100vh") {
       handleResize()
     }
-
-    window.addEventListener('resize', handleResize)
+    //console.log(dimensions.headerBar);
+    window.addEventListener('resize', handleResize);
 
     window.addEventListener('orientationchange', handleResize);
 
@@ -95,16 +99,17 @@ function Layout({ children, router }) {
         />
       </Head>
       <div className="wrapper" style={{ height: dimensions.height, width: dimensions.width }}>
-        <div className="headerWrapper">
+        <div className="headerWrapper" id="headerBar">
           <Logo />
-          <Nav />
+          <Navigation layoutDimensions={dimensions} />
         </div>
+
         <div className="main" onMouseMove={transformCircle}>
           {children}
         </div>
 
         <footer className="footer">
-          <span>WideLine Studio</span>
+          <span>Modern Web Technologies</span>
           <CircleLogoS />
           <span>2021</span>
         </footer>

@@ -3,7 +3,7 @@ import staticVars from '../utils/staticvars'
 import { motion } from "framer-motion"
 import CTAButton from '../components/ctabutton'
 
-const siteTitle = 'WideLine Studio'
+const siteTitle = 'Short Summary'
 
 export default function Home() {
 
@@ -21,9 +21,9 @@ export default function Home() {
           <h1>
             {siteTitle}
           </h1>
-          <p>Tired of old and hard to extend platforms?</p>
-          <p>WideLine Studio is using only best practices to deliver high quality solutions.</p>
-          <p>Coding modern web designs using modern web technologies.</p>
+          <p>Websites. Web Apps. Native Apps.</p>
+          <p>Planning. Complex business logic.</p>
+          <p>Attention to details. Best practices.</p>
           <CTAButton label={"Let's get to work"} />
 
         </main>

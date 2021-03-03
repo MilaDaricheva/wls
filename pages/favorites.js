@@ -21,12 +21,9 @@ export default function Favorites() {
           </h1>
 
           <p>REST APIs give us flexibility.</p>
-
           <p>Cloud computing provides scalability.</p>
-
-          <p>Headless CMS makes content accessible via an API for display on any device.</p>
+          <p>Headless CMS makes content accessible on any device.</p>
           <CTAButton label={"Let's get to work"} />
-
 
         </main>
       </motion.div>

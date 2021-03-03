@@ -1,5 +1,3 @@
-//import styles from '../styles/nav.module.css'
-//import Link from 'next/link'
 import Link from './activelink'
 
 export default function Nav() {
@@ -17,7 +15,7 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link activeClassName="active" href="/projects">
+          <Link activeClassName="active" href="/projects" as="/project/[slug]">
             <a data-item='Projects' >Projects</a>
           </Link>
         </li>
