@@ -619,7 +619,7 @@ main.projects li a::after {
   content: "";
   position: absolute;
   z-index: 3;
-  background-color: var(--color-yellow);
+  background-color: var(--color-yellow-2);
   top: 0;
   left: 0;
   width: 100%;
@@ -652,12 +652,18 @@ main.projects span {
   margin: 0.5rem 0;
   font-size: 0.8em;
   line-height: 1.3em;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
 }
 span.dots {
   text-align: right;
 }
 .project {
   width: 50%;
+}
+.project .post {
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
 }
 .project p {
   font-size: 0.9em;
@@ -671,8 +677,8 @@ span.dots {
     line-height: 1.6em;
   }
   main.projects span {
-    font-size: 1.2em;
-    line-height: 1.3em;
+    font-size: 1em;
+    line-height: 1.4em;
   }
   main.projects li {
     width: 100%;
@@ -689,7 +695,7 @@ span.dots {
     width: 100%;
   }
   .project p {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 @media (max-width: 600px) {
@@ -702,14 +708,14 @@ span.dots {
     line-height: 1.8em;
   }
   main.projects span {
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 1.4em;
   }
   main.projects li a:hover::after {
     transform: scale(1.5, 1.2);
   }
   .project p {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 }
 /* FOOTER */

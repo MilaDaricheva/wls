@@ -9,6 +9,7 @@
     "export": "next build && next export"
   },
   "dependencies": {
+    "@fontsource/barlow": "^4.2.1",
     "@tryghost/content-api": "^1.4.14",
     "axios": "^0.21.1",
     "cross-env": "^7.0.3",

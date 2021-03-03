@@ -1,4 +1,5 @@
 import "fontsource-barlow-condensed/400-normal.css"
+import "@fontsource/barlow/300.css"
 import '../styles/globals.css'
 import '../styles/form.css'
 import { withRouter } from 'next/router'
