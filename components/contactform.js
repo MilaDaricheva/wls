@@ -77,6 +77,7 @@ class ContactForm extends Component {
           <fieldset>
             <div className="btn disableselect" >
               <motion.button
+                aria-label="Submit Form"
                 name="submit"
                 type="submit"
                 id="contact-submit"
