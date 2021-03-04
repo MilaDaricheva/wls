@@ -227,6 +227,20 @@ p {
   flex-wrap: wrap;
 }
 
+.disableselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge*/
+  user-select: none;
+  /* Non-prefixed version, currently not supported by any browser */
+}
 nav.mobileNav {
   position: absolute;
   top: 0;
@@ -234,6 +248,7 @@ nav.mobileNav {
   height: 3.52em;
   width: 7.04em;
   z-index: 1000;
+  touch-action: none;
 }
 nav.closed {
   height: 3.52em;
@@ -243,6 +258,21 @@ nav.closed {
 nav.open {
   height: var(--window-height);
   width: 100%;
+}
+.note {
+  position: absolute;
+  color: white;
+  right: 10px;
+  top: -100px;
+  opacity: 0;
+}
+nav.opening .note {
+  top: 10px;
+  animation: appear 0.5s ease-out 1.5s forwards;
+}
+nav.closing .note {
+  top: -100px;
+  opacity: 0;
 }
 nav.mobileNav .background {
   position: absolute;
@@ -267,12 +297,7 @@ nav.open .background {
 nav button {
   outline: none;
   border: none;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+
   cursor: pointer;
   position: absolute;
   padding: 0;
@@ -405,13 +430,6 @@ nav a:focus {
   position: relative;
   z-index: 6;
   transition: 0.5s;
-
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 .ctaButton a {
   width: 50%;

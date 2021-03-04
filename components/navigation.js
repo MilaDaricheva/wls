@@ -71,11 +71,19 @@ export default function Navigation(props) {
 
       }, [props]);
 
+      function onPanEnd(event, info) {
+        //console.log("pan end", info.offset, info.point.y);
+        if (info.offset.y < -20) {
+          toggleOpen();
+        }
+      }
+
       return (
         <motion.nav
-          className={`mobileNav ${(isOpen || isOpenClass) ? "open" : "closed"}`}
+          className={`mobileNav disableselect ${(isOpen || isOpenClass) ? "open" : "closed"} ${(isOpen) ? "opening" : "closing"}`}
           initial={false}
           animate={isOpen ? "open" : "closed"}
+          onPanEnd={onPanEnd}
           ref={containerRef}
         >
           <motion.div key={rads.smallRad} className="background" variants={sidebar} />
@@ -85,13 +93,14 @@ export default function Navigation(props) {
             ))}
           </motion.ul>
           <MenuToggle toggle={() => toggleOpen()} />
+          <span className="note">Swipe Up to Close</span>
         </motion.nav>
 
       )
     } else {
       //menu for desktop
       return (
-        <nav className="desktopNav" >
+        <nav className="desktopNav disableselect" >
           <ul>
             {itemValues.map(i => (
               <MenuItem item={i} key={i.key} />

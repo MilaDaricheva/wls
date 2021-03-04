@@ -23,7 +23,7 @@ export default function CTAButton(props) {
       onTapStart={onTapStart}
       onTapCancel={onTapCancel}
       onTap={onTap}
-      className="ctaButton"
+      className="ctaButton disableselect"
     >
       <Link href="/contact">
         <a>{props.label}</a>

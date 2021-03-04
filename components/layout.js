@@ -10,20 +10,32 @@ export const siteTitle = 'WideLine Studio';
 
 let circleEl;
 let headerEl;
+
 let mouseX = 0;
 let mouseY = 0;
+const areaSize = 30;
+const degrees = 30;
 
-function transformCircle(event) {
+// function called on each mouse move
+function transformCircle(event, iWidth, iHeight) {
+
+  // if circle element is defined already
   if (circleEl) {
-    if (Math.abs(event.pageX - mouseX) > 30 || Math.abs(event.pageY - mouseY) > 30) {
-      //console.log(Math.abs(event.pageX - mouseX), Math.abs(event.pageY - mouseY), mouseX, mouseY);
+
+    // if mouse moves less than 30px from previous move, we do nothing, performance optimization
+    if (Math.abs(event.pageX - mouseX) > areaSize || Math.abs(event.pageY - mouseY) > areaSize) {
+
+      // remember position for the move/mouse
       mouseX = event.pageX;
       mouseY = event.pageY;
-      // 1. Find mouse position and calculate transform position
-      let xAxis = Math.round((window.innerWidth * 0.5 - event.pageX) / (window.innerWidth / 30));
-      let yAxis = Math.round((window.innerHeight * 0.5 - event.pageY) / (window.innerHeight / 30));
-      //console.log(xAxis, yAxis);
-      // 2. Create animations
+
+      // calculate degrees for rotation
+      // from the middle of the screen (main content area only) circle will follow the mouse 
+      // but no more that 15 deg from the center to the sides, otherwise it is just too wobbly 
+      let xAxis = Math.round((iWidth * 0.5 - event.pageX) / (iWidth / degrees));
+      let yAxis = Math.round((iHeight * 0.5 - event.pageY) / (iHeight / degrees));
+
+      // rotate the circle
       circleEl.style.transform = `rotateY(${-xAxis}deg) rotateX(${-yAxis}deg)`;
     }
   }
@@ -104,7 +116,7 @@ function Layout({ children, router }) {
           <Navigation layoutDimensions={dimensions} />
         </div>
 
-        <div className="main" onMouseMove={transformCircle}>
+        <div className="main" onMouseMove={e => { transformCircle(e, dimensions.width, dimensions.height) }}>
           {children}
         </div>
 

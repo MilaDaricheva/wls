@@ -75,7 +75,7 @@ class ContactForm extends Component {
             <textarea placeholder={formContentPl} value={formContent} aria-label="Your message" name="ftext" onChange={this.onFormContentChange} cols="30" rows="5" required></textarea>
           </fieldset>
           <fieldset>
-            <div className="btn" >
+            <div className="btn disableselect" >
               <motion.button
                 name="submit"
                 type="submit"
