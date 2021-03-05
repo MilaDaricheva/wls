@@ -399,6 +399,20 @@ nav a:focus {
   }
 }
 
+@media (max-height: 720px) and (orientation: landscape) {
+  nav.mobileNav ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  nav.open ul {
+    top: 60px;
+  }
+  nav.mobileNav li {
+    width: 45%;
+  }
+}
+
+
 /* Button and CTA Button */
 
 .btn,
@@ -691,7 +705,15 @@ span.dots {
 }
 .project img {
   width: 100%;
+  height: auto;
   margin-bottom: 1.5em;
+  transition: transform .5s ease;
+  transform: scale(1);
+}
+@media screen and (min-width: 1025px) {
+  .project img.zoomedIn {
+    transform: scale(1.5) translateX(25%);
+  }
 }
 @media (max-width: 1360px) {
   main.projects h4 {

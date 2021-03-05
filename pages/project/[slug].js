@@ -4,6 +4,7 @@ import staticVars from '../../utils/staticvars'
 import { motion } from "framer-motion"
 import CTAButton from '../../components/ctabutton'
 import { getSinglePost, getPosts } from '../../utils/posts';
+import { useEffect } from 'react';
 
 
 export async function getStaticPaths() {
@@ -35,8 +36,21 @@ export async function getStaticProps(context) {
   }
 }
 
+
+
 // PostPage page component
 const PostPage = (props) => {
+
+  function toggleZoom(element) {
+    //console.log("toggle", element);
+    element.classList.toggle("zoomedIn");
+  }
+
+  useEffect(() => {
+    let imgs = document.querySelectorAll(".post img");
+    imgs.forEach(element => element.onclick = function (element) { toggleZoom(element.target) });
+  }, [props]);
+
   // Render post title and content in the page from props
   return (
     <div className="mainWrap">

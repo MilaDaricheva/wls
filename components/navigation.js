@@ -93,7 +93,7 @@ export default function Navigation(props) {
             ))}
           </motion.ul>
           <MenuToggle toggle={() => toggleOpen()} />
-          <span className="note">Swipe Up to Close</span>
+          <span className="note">You may Swipe Up to Close</span>
         </motion.nav>
 
       )
