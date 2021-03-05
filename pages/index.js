@@ -24,7 +24,7 @@ export default function Home() {
           <p>Websites. Web Apps. Native Apps.</p>
           <p>Planning. Complex business logic.</p>
           <p>Attention to details. Best practices.</p>
-          <CTAButton label={"Let's get to work"} />
+          <CTAButton label={"Let's work together"} />
 
         </main>
       </motion.div>

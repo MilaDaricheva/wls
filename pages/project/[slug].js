@@ -66,7 +66,7 @@ const PostPage = (props) => {
 
             <div className="post" dangerouslySetInnerHTML={{ __html: props.post.html }} />
 
-            <CTAButton label={"Let's get to work"} />
+            <CTAButton label={"Let's work together"} />
           </div>
         </main>
       </motion.div>
