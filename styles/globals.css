@@ -73,7 +73,7 @@ html {
 }
 body {
   perspective: 1000px;
-  background-color: var(--color-light-1);
+  background-color: var(--color-light-0);
   color: var(--color-dark-1);
 }
 body,
@@ -191,7 +191,7 @@ p {
   line-height: 2em;
   height: 2em;
   border-top: 1px solid var(--color-light-2);
-  background: var(--color-light-1);
+  background: var(--color-light-0);
 }
 /* LOGO */
 .logo a {
@@ -220,7 +220,7 @@ p {
 /* NAVIGATION */
 .headerWrapper {
   border-bottom: 1px solid var(--color-light-2);
-  background: var(--color-light-1);
+  background: var(--color-light-0);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -347,7 +347,7 @@ nav.desktopNav li {
 }
 
 nav.desktopNav li:hover {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgMTAwIiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjEwMCI+Cgk8c3R5bGU+CgkJdHNwYW4geyB3aGl0ZS1zcGFjZTpwcmUgfQoJCS5zaHAwIHsgZmlsbDogbm9uZTtzdHJva2U6ICNkZmEwMWU7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS13aWR0aDogNyB9IAoJPC9zdHlsZT4KCTxwYXRoIGlkPSJMYXllciAzIiBjbGFzcz0ic2hwMCIgZD0iTTAgOTZMMCA5NkwzMDAgOTZDMzMyLjc1IDk1LjUgMzUwLjE4IDYxLjk1IDM3NS45NSA2NC4yN0M0MDEuODIgNjYuNTkgMzkzLjY1IDk1LjkgNDIzLjMzIDk2QzQ1Ni41NCA5Ni4xMSA2MDAgOTYgNjAwIDk2TDYwMCA5NkM2MDAgOTYgNDU4LjggOTYuMTEgNDIzLjIyIDk2QzM5My42NSA5NS45MSA0MDMuMjYgNjkuNSAzNzYuMzkgNjQuNTVDMzUxLjYzIDU5Ljk5IDMzOS4wNCA5Mi42NSAzMDAgOTZMMCA5NloiIC8+Cjwvc3ZnPg==");
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgMTAwIiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjEwMCI+Cgk8c3R5bGU+CgkJdHNwYW4geyB3aGl0ZS1zcGFjZTpwcmUgfQoJCS5zaHAwIHsgZmlsbDogbm9uZTtzdHJva2U6ICNkZmEwMWU7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS13aWR0aDogNyB9IAoJPC9zdHlsZT4KCTxwYXRoIGlkPSJMYXllciAzIiBjbGFzcz0ic2hwMCIgZD0iTTAgOTZMMCA5NkwzMDAgOTZDMzMyLjc1IDk1LjUgMzQ4LjQ5IDc0Ljg1IDM3NC4yNiA3Ny4xN0M0MDAuMTMgNzkuNSAzOTMuNjUgOTUuOSA0MjMuMzMgOTZDNDU2LjU0IDk2LjExIDYwMCA5NiA2MDAgOTZMNjAwIDk2QzYwMCA5NiA0NTguOCA5Ni4xMSA0MjMuMjIgOTZDMzkzLjY1IDk1LjkxIDQwMS43NSA4Mi42OSAzNzQuODggNzcuNzRDMzUwLjEyIDczLjE4IDMzOS4wNCA5Mi42NSAzMDAgOTZMMCA5NloiIC8+Cjwvc3ZnPg==");
   background-position: left bottom;
   background-repeat: repeat-x;
   animation: line 1s;
@@ -540,9 +540,9 @@ nav a:focus {
   width: var(--window-width);
   height: var(--window-width);
   /* Heights of the svgs are the same */
-  opacity: 0.3;
-  transition: transform 1s, opacity 15s;
-  animation: opacityChange 15s infinite ease-out alternate;
+
+  transition: transform 1s;
+
 }
 .circleWrap {
   left: 0;
@@ -553,18 +553,10 @@ nav a:focus {
   height: 100%;
 }
 
-/*
 #circle1 div {
-  animation: rotation 60s infinite linear;
-}
-#circle3 div {
-  animation: rotation 50s infinite linear;
-}
-*/
-#circle2 div {
   animation: rotationBack 50s infinite linear;
 }
-#circle4 div {
+#circle2 div {
   animation: rotation 40s infinite linear;
 }
 
@@ -600,19 +592,6 @@ nav a:focus {
   }
 }
 
-@keyframes opacityChange {
-  0% {
-    opacity: 0.3;
-  }
-
-  70% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
 
 /* PROJECTS AND BLOG */
 main.projects ul {

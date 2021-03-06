@@ -14,7 +14,7 @@ let headerEl;
 let mouseX = 0;
 let mouseY = 0;
 const areaSize = 30;
-const degrees = 30;
+const degrees = 40;
 
 // function called on each mouse move
 function transformCircle(event, iWidth, iHeight) {
@@ -31,7 +31,7 @@ function transformCircle(event, iWidth, iHeight) {
 
       // calculate degrees for rotation
       // from the middle of the screen (main content area only) circle will follow the mouse 
-      // but no more that 15 deg from the center to the sides, otherwise it is just too wobbly 
+      // but no more that 20 deg from the center to the sides, otherwise it is just too wobbly 
       let xAxis = Math.round((iWidth * 0.5 - event.pageX) / (iWidth / degrees));
       let yAxis = Math.round((iHeight * 0.5 - event.pageY) / (iHeight / degrees));
 
