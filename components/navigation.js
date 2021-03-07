@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { useState, useEffect } from 'react'
 import { motion, useCycle } from "framer-motion";
-import { MenuToggle } from "./MenuToggle";
-import { MenuItem } from "./MenuItem";
+import { MenuToggle } from "./menuoggle";
+import { MenuItem } from "./menuitem";
 
 const listVariants = {
   open: {
