@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useState, useEffect } from 'react'
 import { motion, useCycle } from "framer-motion";
-import { MenuToggle } from "./menuoggle";
+import { MenuToggle } from "./menutoggle";
 import { MenuItem } from "./menuitem";
 
 const listVariants = {
